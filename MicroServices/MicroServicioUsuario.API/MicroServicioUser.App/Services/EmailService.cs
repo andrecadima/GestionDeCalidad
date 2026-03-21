@@ -9,7 +9,7 @@ namespace MicroServicioUser.App.Services
 {
     public class EmailService
     {
-        private IEmailService _emailService;
+        private readonly IEmailService _emailService;
 
         public EmailService(IEmailService emailService)
         {

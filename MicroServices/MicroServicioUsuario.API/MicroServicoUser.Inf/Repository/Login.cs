@@ -5,7 +5,7 @@ namespace MicroServicoUser.Inf.Repository;
 
 public class Login : ILogin
 {
-    IRepository _userService;
+    readonly IRepository _userService;
     public Login(IRepository repository)
     {
         _userService = repository;
@@ -13,7 +13,6 @@ public class Login : ILogin
 
     public async Task<(bool ok, string? error)> ChangePassword(int userId, string currentPassword, string newPassword)
     {
-        
         var userResult = await _userService.GetById(userId);
         if (!userResult.IsSuccess || userResult.Value is null)
             return (false, "Usuario no encontrado.");
@@ -21,8 +20,7 @@ public class Login : ILogin
         var user = userResult.Value;
 
         // 1) Verificar contraseña actual
-        var currentHash = RegistrationHelpers.Md5Hex(currentPassword);
-        if (!string.Equals(user.PasswordHash, currentHash, StringComparison.OrdinalIgnoreCase))
+        if (!RegistrationHelpers.VerifyPassword(currentPassword, user.PasswordHash))
             return (false, "La contraseña actual no es correcta.");
 
         // 2) Reglas de complejidad
@@ -31,12 +29,11 @@ public class Login : ILogin
             return (false, pwCheck.error);
 
         // 3) Evitar misma contraseña
-        var newHash = RegistrationHelpers.Md5Hex(newPassword);
-        if (string.Equals(user.PasswordHash, newHash, StringComparison.OrdinalIgnoreCase))
+        if (RegistrationHelpers.VerifyPassword(newPassword, user.PasswordHash))
             return (false, "La nueva contraseña debe ser diferente a la actual.");
 
         // 4) Persistir (NO tocar FirstLogin aquí)
-        user.PasswordHash = newHash;
+        user.PasswordHash = RegistrationHelpers.HashPassword(newPassword);
         user.LastUpdate = DateTime.UtcNow;
 
         var update = await _userService.Update(user);
@@ -57,33 +54,34 @@ public class Login : ILogin
         if (user.FirstLogin != 1)
             return (false, "Este usuario ya ha cambiado su contraseña inicial.");
 
-        var currentHash = RegistrationHelpers.Md5Hex(currentPassword);
-        if (!string.Equals(user.PasswordHash, currentHash, StringComparison.OrdinalIgnoreCase))
+        if (!RegistrationHelpers.VerifyPassword(currentPassword, user.PasswordHash))
             return (false, "La contraseña actual no es correcta.");
 
-   
-        var newHash = RegistrationHelpers.Md5Hex(newPassword);
-        if (string.Equals(user.PasswordHash, newHash, StringComparison.OrdinalIgnoreCase))
+        if (RegistrationHelpers.VerifyPassword(newPassword, user.PasswordHash))
             return (false, "La nueva contraseña debe ser diferente a la actual.");
-        user.PasswordHash = newHash;
+
+        user.PasswordHash = RegistrationHelpers.HashPassword(newPassword);
         user.FirstLogin = 0;
         user.LastUpdate = DateTime.UtcNow;
 
         var update = await _userService.Update(user);
         if (!update.IsSuccess)
             return (false, string.Join("; ", update.Errors));
+
         return (true, null);
     }
 
-    public async Task<(bool ok, int? userId, string? role, string? error, bool isFirstLogin)> ValidateLogin(string username,
+    public async Task<(bool ok, int? userId, string? role, string? error, bool isFirstLogin)> ValidateLogin(
+        string username,
         string plainPassword)
     {
-        var result = await _userService.GetByUsername(username); //tienes
-        if(result.IsFailure || !result.Value.Status) return (false, null, null, result.Errors.First(), false);
-        
+        var result = await _userService.GetByUsername(username);
+        if (result.IsFailure || result.Value == null || !result.Value.Status)
+            return (false, null, null, result.Errors.FirstOrDefault() ?? "Usuario no encontrado.", false);
+
         var user = result.Value;
-        var givenHash = RegistrationHelpers.Md5Hex(plainPassword);
-        if (!string.Equals(user.PasswordHash, givenHash, System.StringComparison.OrdinalIgnoreCase))
+
+        if (!RegistrationHelpers.VerifyPassword(plainPassword, user.PasswordHash))
             return (false, null, null, "Contraseña incorrecta.", false);
 
         // DB may store role as numeric code; convert it to application role name if necessary
@@ -92,6 +90,7 @@ public class Login : ILogin
         {
             roleValue = AuthenticationRoles.CodeToRole[code];
         }
+
         return (true, user.Id, roleValue, null, user.FirstLogin == 0);
     }
 }

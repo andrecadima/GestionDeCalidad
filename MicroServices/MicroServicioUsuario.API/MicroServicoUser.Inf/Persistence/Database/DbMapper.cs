@@ -2,6 +2,7 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace MicroServicoUser.Inf.Persistence.Database;
 
@@ -11,29 +12,28 @@ public static class DbMapper
     {
         T model = new();
         PropertyInfo[] propertyInfo = typeof(T).GetProperties();
-        foreach (PropertyInfo property in propertyInfo)
+
+        foreach (PropertyInfo property in propertyInfo.Where(p => row.Table.Columns.Contains(p.Name)))
         {
-            if (row.Table.Columns.Contains(property.Name))
+            if (row[property.Name] == DBNull.Value)
             {
-                if (row[property.Name] == DBNull.Value)
+                if (Nullable.GetUnderlyingType(property.PropertyType) != null)
                 {
-                    if (Nullable.GetUnderlyingType(property.PropertyType) != null)
-                    {
-                        property.SetValue(model,  null);
-                    }
-                    else
-                    {
-                        property.SetValue(model, Activator.CreateInstance(property.PropertyType));
-                    }
+                    property.SetValue(model, null);
                 }
                 else
                 {
-                    Type targetType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
-                    var castedValue = Convert.ChangeType(row[property.Name], targetType);
-                    property.SetValue(model, castedValue);
+                    property.SetValue(model, Activator.CreateInstance(property.PropertyType));
                 }
             }
+            else
+            {
+                Type targetType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+                var castedValue = Convert.ChangeType(row[property.Name], targetType);
+                property.SetValue(model, castedValue);
+            }
         }
+
         return model;
     }
 

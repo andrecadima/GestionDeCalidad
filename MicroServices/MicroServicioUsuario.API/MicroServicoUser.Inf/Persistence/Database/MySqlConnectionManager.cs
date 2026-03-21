@@ -7,18 +7,23 @@ namespace MicroServicoUser.Inf.Persistence.Database;
 public class MySqlConnectionManager
 {
     private readonly string _connectionString;
+
     public MySqlConnectionManager(IConfiguration configuration)
     {
         _connectionString = configuration.GetConnectionString("MysqlUserServicioDB");
     }
+
     private MySqlConnection CreateConnection() => new(_connectionString);
 
-    public IEnumerable<T> ExecuteParameterizedQuery<T>(string query, T model) where T : new()
+    public IEnumerable<T> ExecuteParameterizedQuery<T>(string query, T model) where T : class, new()
     {
         using MySqlCommand command = DbParameterHelper.PopulateCommandParameters(query, model);
         return ExecuteCommand<T>(command);
     }
-    public IEnumerable<TOut> ExecuteParameterizedQuery<TOut, TParam>(string query, TParam model) where TOut : new()
+
+    public IEnumerable<TOut> ExecuteParameterizedQuery<TOut, TParam>(string query, TParam model)
+        where TOut : new()
+        where TParam : class
     {
         using MySqlCommand command = DbParameterHelper.PopulateCommandParameters(query, model);
         return ExecuteCommand<TOut>(command);
@@ -29,7 +34,8 @@ public class MySqlConnectionManager
         MySqlCommand command = new(query);
         return ExecuteCommand<T>(command);
     }
-    public int ExecuteParameterizedNonQuery<T>(string query, T model) where T : new()
+
+    public int ExecuteParameterizedNonQuery<T>(string query, T model) where T : class
     {
         using MySqlCommand command = DbParameterHelper.PopulateCommandParameters(query, model);
         return ExecuteCommand(command);
@@ -49,6 +55,7 @@ public class MySqlConnectionManager
         int affectedRows = command.ExecuteNonQuery();
         return affectedRows;
     }
+
     private IEnumerable<T> ExecuteCommand<T>(MySqlCommand command) where T : new()
     {
         using MySqlConnection connection = CreateConnection();

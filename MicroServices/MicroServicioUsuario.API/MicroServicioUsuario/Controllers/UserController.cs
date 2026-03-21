@@ -7,26 +7,36 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Org.BouncyCastle.Bcpg.OpenPgp;
+using System.ComponentModel.DataAnnotations;
 
 namespace MicroServicioUsuario.API.Controllers
 {
-    public class ChangePasswordDTO
+    public class ChangePasswordDto
     {
-        public int UserId { get; set; }
+        [Required]
+        public int ? Id { get; set; }
+        [Required]
         public string CurrentPassword { get; set;  }
+        [Required]
         public string NewPassword{ get; set; }
     }
-    public class LoginDTO{
+    public class LoginDto{
+        [Required]
         public string Username { get; set; }
+        [Required]
         public string Password { get; set; }
     }
     
-    public class RegisterDTO{
+    public class RegisterDto{
+        [Required]
         public string FirstName { get; set; }
+        [Required]
         public string LastName { get; set; }
         public string Email { get; set; }
+        [Required]
         public string Role { get; set; }
-        public int CreatedBy { get; set; }
+        [Required]
+        public int? CreatedBy { get; set; }
     }
     
     [Route("api/[controller]")]
@@ -51,16 +61,22 @@ namespace MicroServicioUsuario.API.Controllers
             
         [HttpPost("change-password")]
         [AllowAnonymous]
-        public async Task<ActionResult<bool>> ChangePasswordFirstLogin([FromBody] ChangePasswordDTO cpDTO)
+        public async Task<ActionResult<bool>> ChangePasswordFirstLogin([FromBody] ChangePasswordDto cpDTO)
         {
-            var res = await this.loginService.ChangePasswordFirstLogin(cpDTO.UserId, cpDTO.CurrentPassword,
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (!cpDTO.Id.HasValue)
+                return BadRequest(new { Ok = false, Error = "Id is required." });
+
+            var res = await this.loginService.ChangePasswordFirstLogin(cpDTO.Id.Value, cpDTO.CurrentPassword,
                 cpDTO.NewPassword);
-            
-            return Ok(new {Ok = res.ok, Error = res.error});
+
+            return Ok(new { Ok = res.ok, Error = res.error });
         }
         [HttpPost("login")]
         [AllowAnonymous] // Allow anonymous access for login
-        public async Task<ActionResult<bool>> Login([FromBody] LoginDTO loginDTO)
+        public async Task<ActionResult<bool>> Login([FromBody] LoginDto loginDTO)
         {
             
             var obj = await this.loginService.ValidateLogin(loginDTO.Username, loginDTO.Password);
@@ -76,10 +92,20 @@ namespace MicroServicioUsuario.API.Controllers
         
         [HttpPost("register")]
         [AllowAnonymous] 
-        public async Task<ActionResult<bool>> Register([FromBody] RegisterDTO registerDto)
+      public async Task<ActionResult<bool>> Register([FromBody] RegisterDto registerDto)
         {
-            var obj = await this.registrationService.RegisterUser(registerDto.FirstName, registerDto.LastName, registerDto.Email, registerDto.Role, registerDto.CreatedBy);
-            return Ok(new {Ok=obj.ok, Error=obj.error});
+            if (!registerDto.CreatedBy.HasValue)
+            {
+                return BadRequest(new { Ok = false, Error = "CreatedBy is required." });
+            }
+            var obj = await this.registrationService.RegisterUser(
+                registerDto.FirstName,
+                registerDto.LastName,
+                registerDto.Email,
+                registerDto.Role,
+                registerDto.CreatedBy.Value
+            );
+            return Ok(new { Ok = obj.ok, Error = obj.error });
         }
             
         [HttpGet("select")]

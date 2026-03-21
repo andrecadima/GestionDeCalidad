@@ -7,13 +7,28 @@ namespace MicroServicoUser.Inf.Persistence.Database;
 
 public static class DbParameterHelper
 {
-    public static MySqlCommand PopulateCommandParameters<T>(string query, T model)
+    private static readonly Regex ParameterRegex = new(
+        @"@\w+",
+        RegexOptions.Compiled,
+        TimeSpan.FromMilliseconds(100)
+    );
+
+    public static MySqlCommand PopulateCommandParameters<T>(string query, T model) where T : class
     {
-        var parameters = Regex.Matches(query, @"@\w+")
-            .Cast<Match>()
-            .Select(m => m.Value)
-            .Distinct()
-            .ToList();
+        List<string> parameters;
+
+        try
+        {
+            parameters = ParameterRegex.Matches(query)
+                .Cast<Match>()
+                .Select(m => m.Value)
+                .Distinct()
+                .ToList();
+        }
+        catch (RegexMatchTimeoutException)
+        {
+            throw new InvalidOperationException("La extracción de parámetros de la consulta excedió el tiempo permitido.");
+        }
 
         MySqlCommand command = new(query);
 
@@ -31,9 +46,6 @@ public static class DbParameterHelper
             {
                 object value = property.GetValue(model) ?? DBNull.Value;
                 command.Parameters.Add(new MySqlParameter(paramName, value));
-            }
-            else
-            {
             }
         }
 

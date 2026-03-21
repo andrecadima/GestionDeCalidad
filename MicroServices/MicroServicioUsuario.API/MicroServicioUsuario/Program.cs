@@ -8,6 +8,8 @@ using MicroServicioUser.Dom.Entities;
 using MicroServicoUser.Inf.EmailAdapters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Net;
+using System.Net.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,13 +45,12 @@ var adapter = new SmtpEmailAdapter(
         FromName = fromName
     }
 );
+var userApiUrl = _configuration["ServiceUrls:UserApi"];
 
-builder.Services.AddHttpClient("userApi", u => {
-    u.BaseAddress = new Uri("http://localhost:5249");
-}).ConfigurePrimaryHttpMessageHandler(() =>
-    new HttpClientHandler {
-        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
-    });
+builder.Services.AddHttpClient("userApi", u =>
+{
+    u.BaseAddress = new Uri(userApiUrl!);
+});
 
 builder.Services.AddScoped<IEmailService, SmtpEmailAdapter>(sp => adapter);
 builder.Services.AddScoped<EmailService>();
@@ -107,4 +108,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();

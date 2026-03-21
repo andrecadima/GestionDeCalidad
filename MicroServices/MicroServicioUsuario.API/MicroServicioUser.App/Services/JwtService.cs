@@ -5,7 +5,6 @@ using MicroServicioUser.Dom.Interfaces;
 using MicroServicioUser.Dom.Patterns;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
 
 namespace MicroServicioUser.App.Services;
 
@@ -15,13 +14,26 @@ public class JwtService : IJwtService
 
     public JwtService(IConfiguration config) => _config = config;
 
-    public async Task<Result<string>> GenerateToken(int userId,  string role)
+    public Task<Result<string>> GenerateToken(int userId, string role)
     {
         IConfigurationSection jwt = _config.GetSection("Jwt");
-        SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt["Key"]));
+
+        string keyValue = jwt["Key"]
+            ?? throw new InvalidOperationException("Jwt:Key no está configurado.");
+
+        string issuer = jwt["Issuer"]
+            ?? throw new InvalidOperationException("Jwt:Issuer no está configurado.");
+
+        string audience = jwt["Audience"]
+            ?? throw new InvalidOperationException("Jwt:Audience no está configurado.");
+
+        string expireMinutesValue = jwt["ExpireMinutes"]
+            ?? throw new InvalidOperationException("Jwt:ExpireMinutes no está configurado.");
+
+        SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyValue));
         SigningCredentials creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-        List<Claim> claims = new List<Claim>
+        List<Claim> claims = new()
         {
             new Claim(JwtRegisteredClaimNames.NameId, userId.ToString()),
             new Claim(ClaimTypes.Role, role),
@@ -29,14 +41,16 @@ public class JwtService : IJwtService
         };
 
         JwtSecurityToken token = new JwtSecurityToken(
-            issuer: jwt["Issuer"],
-            audience: jwt["Audience"],
+            issuer: issuer,
+            audience: audience,
             claims: claims,
             notBefore: DateTime.UtcNow,
-            expires: DateTime.UtcNow.AddMinutes(int.Parse(jwt["ExpireMinutes"])),
+            expires: DateTime.UtcNow.AddMinutes(int.Parse(expireMinutesValue)),
             signingCredentials: creds
         );
 
-        return Result<string>.Success(new JwtSecurityTokenHandler().WriteToken(token));
+        string tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
+
+        return Task.FromResult(Result<string>.Success(tokenValue));
     }
 }

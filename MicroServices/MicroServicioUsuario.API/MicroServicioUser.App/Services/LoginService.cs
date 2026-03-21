@@ -4,7 +4,7 @@ namespace MicroServicioUser.App.Services;
 
 public class LoginService
 {
-    private ILogin _login;
+    private readonly ILogin _login;
     public LoginService(ILogin login)
     {
         _login = login;
