@@ -1,0 +1,10 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\Controller\EstablishmentController.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\Program.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\obj\Debug\net9.0\Establishment.API.GlobalUsings.g.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\obj\Debug\net9.0\Establishment.API.AssemblyInfo.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\obj\Debug\net9.0\Establishment.API.MvcApplicationPartsAssemblyInfo.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\appsettings.Development.json
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\appsettings.json
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\Establishment.API.http
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\Properties\launchSettings.json

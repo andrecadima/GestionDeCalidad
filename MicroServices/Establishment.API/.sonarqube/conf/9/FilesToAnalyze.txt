@@ -1,0 +1,14 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Tests\Controller\EstablishmentControllerTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Tests\Model\EstablishmentValidationTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Tests\Persistence\MySqlConnectionBDTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Tests\ProgramTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Tests\ResultTest.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Tests\Service\EstablishmentServiceTests.cs
+C:\Users\Andre\.nuget\packages\microsoft.net.test.sdk\17.12.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\Andre\.nuget\packages\microsoft.testplatform.testhost\17.12.0\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\Andre\.nuget\packages\microsoft.testplatform.testhost\17.12.0\build\netcoreapp3.1\x64\testhost.dll
+C:\Users\Andre\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Andre\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Andre\.nuget\packages\xunit.runner.visualstudio\2.8.2\build\net6.0\xunit.runner.utility.netcoreapp10.dll
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Tests\coverage.opencover.xml
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Tests\TestResults\coverage.opencover.xml

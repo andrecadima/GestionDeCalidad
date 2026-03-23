@@ -1,0 +1,3 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Dom\Interface\IRepository.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Dom\Model\Establishment.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Dom\Model\Result.cs

@@ -1,0 +1,2 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Inf\Persistence\MySQLConnectionDB.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Inf\Repository\EstablishmentRepository.cs
