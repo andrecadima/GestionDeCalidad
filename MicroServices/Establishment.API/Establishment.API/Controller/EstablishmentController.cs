@@ -86,12 +86,15 @@ public class EstablishmentController: ControllerBase
         });
     }
 
-    
+
+    private static readonly string[] UnknownError = { "UnknownError" };
+
     private IActionResult MapFailure(IEnumerable<string> errors)
     {
         var errorList = errors.ToList();
+
         if (errorList.Count == 0)
-            return StatusCode(500, new { errors = new[] { "UnknownError" } });
+            return StatusCode(500, new { errors = UnknownError });
 
         // Validation errors start with "InvalidInput" or contain typical validation messages
         if (errorList.Any(e => e.StartsWith("InvalidInput") || e.Contains("El ") || e.Contains("must be") || e.Contains("debe")))
@@ -100,7 +103,6 @@ public class EstablishmentController: ControllerBase
         if (errorList.Any(e => e.Equals("NotFound") || e.Contains("NoRowsAffected")))
             return NotFound(new { errors = errorList });
 
-        // DB or other server errors
         return StatusCode(500, new { errors = errorList });
     }
 }

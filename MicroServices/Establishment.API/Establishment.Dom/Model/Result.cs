@@ -14,7 +14,9 @@ public class Result
     }
 
     public static Result Success() => new Result(true, new List<string>());
-    public static Result Failure(params string[] errors) => new Result(false, new List<string>(errors));
+
+    public static Result Failure(params string[] errors) =>
+        new Result(false, new List<string>(errors));
 }
 
 public class Result<T> : Result
@@ -26,6 +28,10 @@ public class Result<T> : Result
     {
         Value = value;
     }
-    public static Result<T> Success(T value) => new Result<T>(true, value, new List<string>());
-    public static Result<T> Failure(params string[] errors) => new Result<T>(false, default(T)!, new List<string>(errors));
+
+    public static Result<T> Success(T value) =>
+        new Result<T>(true, value, new List<string>());
+
+    public new static Result<T> Failure(params string[] errors) =>
+        new Result<T>(false, default!, new List<string>(errors));
 }

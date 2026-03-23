@@ -16,7 +16,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var jwtSection = builder.Configuration.GetSection("Jwt");
-var keyBytes = Encoding.UTF8.GetBytes(jwtSection["Key"]);
+var jwtKey = jwtSection["Key"];
+
+if (string.IsNullOrWhiteSpace(jwtKey))
+{
+    throw new InvalidOperationException("La configuración JWT 'Key' no está definida.");
+}
+
+var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
 
 builder.Services
     .AddAuthentication(options =>

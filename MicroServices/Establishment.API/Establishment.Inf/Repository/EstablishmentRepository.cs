@@ -5,11 +5,10 @@ using Establishment.Inf.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Org.BouncyCastle.Crypto.Engines;
 
 namespace Establishment.Inf.Repository;
 
-public class EstablishmentRepository: IRepository
+public class EstablishmentRepository : IRepository
 {
     private readonly MySqlConnectionDB _connectionDB;
 
@@ -32,14 +31,14 @@ public class EstablishmentRepository: IRepository
             await using var cmd = new MySqlCommand(sql, conn);
             var lastUpdate = t.LastUpdate == default ? DateTime.Now : t.LastUpdate;
 
-            cmd.Parameters.AddWithValue("@name", t.Name ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@tax_id", t.TaxId ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@sanitary_license", t.SanitaryLicense ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@name", t.Name);
+            cmd.Parameters.AddWithValue("@tax_id", t.TaxId);
+            cmd.Parameters.AddWithValue("@sanitary_license", t.SanitaryLicense);
             cmd.Parameters.AddWithValue("@sanitary_license_expiry", t.SanitaryLicenseExpiry ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@address", t.Address ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@phone", t.Phone ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@email", t.Email ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@establishment_type", t.EstablishmentType ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@address", t.Address);
+            cmd.Parameters.AddWithValue("@phone", t.Phone);
+            cmd.Parameters.AddWithValue("@email", t.Email);
+            cmd.Parameters.AddWithValue("@establishment_type", t.EstablishmentType);
             cmd.Parameters.AddWithValue("@created_by", t.CreatedBy);
             cmd.Parameters.AddWithValue("@status", 1);
             cmd.Parameters.AddWithValue("@last_update", lastUpdate);
@@ -79,14 +78,14 @@ public class EstablishmentRepository: IRepository
             await conn.OpenAsync();
             await using var cmd = new MySqlCommand(sql, conn);
 
-            cmd.Parameters.AddWithValue("@name", t.Name ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@tax_id", t.TaxId ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@sanitary_license", t.SanitaryLicense ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@name", t.Name);
+            cmd.Parameters.AddWithValue("@tax_id", t.TaxId);
+            cmd.Parameters.AddWithValue("@sanitary_license", t.SanitaryLicense);
             cmd.Parameters.AddWithValue("@sanitary_license_expiry", t.SanitaryLicenseExpiry ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@address", t.Address ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@phone", t.Phone ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@email", t.Email ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@establishment_type", t.EstablishmentType ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@address", t.Address);
+            cmd.Parameters.AddWithValue("@phone", t.Phone);
+            cmd.Parameters.AddWithValue("@email", t.Email);
+            cmd.Parameters.AddWithValue("@establishment_type", t.EstablishmentType);
             cmd.Parameters.AddWithValue("@status", 1);
             cmd.Parameters.AddWithValue("@id", t.Id);
 
@@ -94,7 +93,7 @@ public class EstablishmentRepository: IRepository
             if (affected == 0)
                 return Result<int>.Failure("NoRowsAffected");
 
-            return Result<int>.Success((int)affected);
+            return Result<int>.Success(affected);
         }
         catch (Exception ex)
         {
@@ -102,7 +101,6 @@ public class EstablishmentRepository: IRepository
         }
     }
 
-    // Logical delete: set status = 0 and update last_update
     public async Task<Result<int>> Delete(Establishment.Dom.Model.Establishment t)
     {
         const string sql = @"UPDATE establishment SET status = 0, last_update = CURRENT_TIMESTAMP WHERE id = @id;";
@@ -118,7 +116,7 @@ public class EstablishmentRepository: IRepository
             if (affected == 0)
                 return Result<int>.Failure("NoRowsAffected");
 
-            return Result<int>.Success((int)affected);
+            return Result<int>.Success(affected);
         }
         catch (Exception ex)
         {
@@ -139,7 +137,8 @@ public class EstablishmentRepository: IRepository
             cmd.Parameters.AddWithValue("@id", id);
 
             await using var reader = (MySqlDataReader)await cmd.ExecuteReaderAsync();
-            if (!await reader.ReadAsync()) return Result<Establishment.Dom.Model.Establishment>.Failure("NotFound");
+            if (!await reader.ReadAsync())
+                return Result<Establishment.Dom.Model.Establishment>.Failure("NotFound");
 
             var est = MapReaderToEstablishment(reader);
             return Result<Establishment.Dom.Model.Establishment>.Success(est);
@@ -179,25 +178,26 @@ public class EstablishmentRepository: IRepository
 
     private static Establishment.Dom.Model.Establishment MapReaderToEstablishment(MySqlDataReader reader)
     {
-        var est = new Establishment.Dom.Model.Establishment();
-
-        est.Id = reader.GetInt32("id");
-        est.Name = reader.IsDBNull(reader.GetOrdinal("name")) ? null : reader.GetString("name");
-        est.TaxId = reader.IsDBNull(reader.GetOrdinal("tax_id")) ? null : reader.GetString("tax_id");
-        est.SanitaryLicense = reader.IsDBNull(reader.GetOrdinal("sanitary_license")) ? null : reader.GetString("sanitary_license");
-        est.SanitaryLicenseExpiry = reader.IsDBNull(reader.GetOrdinal("sanitary_license_expiry")) ? (DateTime?)null : reader.GetDateTime("sanitary_license_expiry");
-        est.Address = reader.IsDBNull(reader.GetOrdinal("address")) ? null : reader.GetString("address");
-        est.Phone = reader.IsDBNull(reader.GetOrdinal("phone")) ? null : reader.GetString("phone");
-        est.Email = reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString("email");
-        est.EstablishmentType = reader.IsDBNull(reader.GetOrdinal("establishment_type")) ? null : reader.GetString("establishment_type");
-        est.CreatedBy = reader.IsDBNull(reader.GetOrdinal("created_by")) ? 0 : reader.GetInt32("created_by");
-        est.CreatedDate = reader.IsDBNull(reader.GetOrdinal("created_date")) ? DateTime.MinValue : reader.GetDateTime("created_date");
-        est.LastUpdate = reader.IsDBNull(reader.GetOrdinal("last_update")) ? DateTime.MinValue : reader.GetDateTime("last_update");
-        est.Status = !reader.IsDBNull(reader.GetOrdinal("status")) && reader.GetInt32("status") == 1;
-
-        return est;
+        return new Establishment.Dom.Model.Establishment
+        {
+            Id = reader.GetInt32("id"),
+            Name = reader.IsDBNull(reader.GetOrdinal("name")) ? string.Empty : reader.GetString("name"),
+            TaxId = reader.IsDBNull(reader.GetOrdinal("tax_id")) ? string.Empty : reader.GetString("tax_id"),
+            SanitaryLicense = reader.IsDBNull(reader.GetOrdinal("sanitary_license")) ? string.Empty : reader.GetString("sanitary_license"),
+            SanitaryLicenseExpiry = reader.IsDBNull(reader.GetOrdinal("sanitary_license_expiry"))
+                ? (DateTime?)null
+                : reader.GetDateTime("sanitary_license_expiry"),
+            Address = reader.IsDBNull(reader.GetOrdinal("address")) ? string.Empty : reader.GetString("address"),
+            Phone = reader.IsDBNull(reader.GetOrdinal("phone")) ? string.Empty : reader.GetString("phone"),
+            Email = reader.IsDBNull(reader.GetOrdinal("email")) ? string.Empty : reader.GetString("email"),
+            EstablishmentType = reader.IsDBNull(reader.GetOrdinal("establishment_type")) ? string.Empty : reader.GetString("establishment_type"),
+            CreatedBy = reader.IsDBNull(reader.GetOrdinal("created_by")) ? 0 : reader.GetInt32("created_by"),
+            CreatedDate = reader.IsDBNull(reader.GetOrdinal("created_date")) ? DateTime.MinValue : reader.GetDateTime("created_date"),
+            LastUpdate = reader.IsDBNull(reader.GetOrdinal("last_update")) ? DateTime.MinValue : reader.GetDateTime("last_update"),
+            Status = !reader.IsDBNull(reader.GetOrdinal("status")) && reader.GetInt32("status") == 1
+        };
     }
-    
+
     public async Task<Result<IEnumerable<Dom.Model.Establishment>>> Search(string property)
     {
         const string sql = @"

@@ -9,7 +9,8 @@ public class MySqlConnectionDB
 
     public MySqlConnectionDB(IConfiguration configuration)
     {
-        connectionString = configuration.GetConnectionString("EstablishmentDB");
+        connectionString = configuration.GetConnectionString("DefaultConnection")
+            ?? throw new InvalidOperationException("La cadena de conexión 'DefaultConnection' no está configurada.");
     }
 
     public MySqlConnection GetConnection() {
