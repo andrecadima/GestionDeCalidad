@@ -25,6 +25,4 @@ C:\Users\Andre\.nuget\packages\microsoft.testplatform.testhost\18.3.0\build\net8
 C:\Users\Andre\.nuget\packages\microsoft.testplatform.testhost\18.3.0\build\net8.0\x64\testhost.dll
 C:\Users\Andre\.nuget\packages\xunit.runner.visualstudio\3.1.5\build\net8.0\xunit.abstractions.dll
 C:\Users\Andre\.nuget\packages\xunit.runner.visualstudio\3.1.5\build\net8.0\xunit.runner.visualstudio.testadapter.dll
-D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\coverage.json
-D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\MicroServicioUser.Tests\TestResults\coverage\coverage.opencover.xml
 D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\TestResults\coverage\coverage.opencover.xml

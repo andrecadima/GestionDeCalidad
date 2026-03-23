@@ -32,7 +32,7 @@
     <Property Name="sonar.terraform.file.suffixes">.tf</Property>
     <Property Name="sonar.forceAuthentication">true</Property>
     <Property Name="sonar.notifications.delay">60</Property>
-    <Property Name="sonar.multi-quality-mode.enabled">true</Property>
+    <Property Name="sonar.multi-quality-mode.enabled">false</Property>
     <Property Name="sonar.rust.file.suffixes">.rs</Property>
     <Property Name="sonaranalyzer-cs.ruleNamespace">SonarAnalyzer.CSharp</Property>
     <Property Name="sonar.ui.forceOldNavigation">false</Property>
@@ -151,7 +151,7 @@
     <Property Name="sonar.java.jvmframeworkconfig.activate">true</Property>
     <Property Name="sonar.updatecenter.url">https://downloads.sonarsource.com/sonarqube/update/update-center.properties</Property>
     <Property Name="sonar.core.id">147B411E-AZ0MAA1DE4QnGG_YqMlI</Property>
-    <Property Name="sonar.core.startTime">3/22/2026 8:15:42 PM</Property>
+    <Property Name="sonar.core.startTime">3/23/2026 9:08:42 AM</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">http://localhost:9000</Property>
