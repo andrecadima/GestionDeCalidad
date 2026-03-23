@@ -2,9 +2,9 @@
 <CoverageSession>
   <Summary numSequencePoints="303" visitedSequencePoints="166" numBranchPoints="104" visitedBranchPoints="29" sequenceCoverage="54.78" branchCoverage="27.88" maxCyclomaticComplexity="77" minCyclomaticComplexity="7" visitedClasses="19" numClasses="26" visitedMethods="42" numMethods="50" />
   <Modules>
-    <Module hash="1A69BDD3-38C7-4A4E-9251-4EE5F6378147">
+    <Module hash="6D72D32C-0A2C-4FB1-8D14-55711160E03E">
       <ModulePath>Establishment.API.dll</ModulePath>
-      <ModuleTime>2026-03-23T02:00:55</ModuleTime>
+      <ModuleTime>2026-03-23T02:51:37</ModuleTime>
       <ModuleName>Establishment.API</ModuleName>
       <Files>
         <File uid="1" fullPath="D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.API\Program.cs" />
@@ -288,9 +288,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="6BFE87A6-7F24-475A-9F34-1E5250690B11">
+    <Module hash="575C2A60-42E3-4C14-A9F8-18CCB5214917">
       <ModulePath>Establishment.App.dll</ModulePath>
-      <ModuleTime>2026-03-23T02:00:55</ModuleTime>
+      <ModuleTime>2026-03-23T02:51:37</ModuleTime>
       <ModuleName>Establishment.App</ModuleName>
       <Files>
         <File uid="3" fullPath="D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.App\Service\EstablishmentService.cs" />
@@ -437,9 +437,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="09ACAF89-9CB2-4F50-89CB-C7A5B8EE34FC">
+    <Module hash="75F2E165-A331-4CF4-8491-7A7A48CE6B15">
       <ModulePath>Establishment.Dom.dll</ModulePath>
-      <ModuleTime>2026-03-23T02:00:55</ModuleTime>
+      <ModuleTime>2026-03-23T02:51:37</ModuleTime>
       <ModuleName>Establishment.Dom</ModuleName>
       <Files>
         <File uid="4" fullPath="D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Dom\Model\Establishment.cs" />
@@ -740,9 +740,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="24C81D68-0850-42B7-9357-6567BB179807">
+    <Module hash="BD9EF48B-1BEF-4D07-A2A6-26DA97DB3B82">
       <ModulePath>Establishment.Inf.dll</ModulePath>
-      <ModuleTime>2026-03-23T02:00:55</ModuleTime>
+      <ModuleTime>2026-03-23T02:51:37</ModuleTime>
       <ModuleName>Establishment.Inf</ModuleName>
       <Files>
         <File uid="6" fullPath="D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\Establishment.API\Establishment.Inf\Repository\EstablishmentRepository.cs" />
