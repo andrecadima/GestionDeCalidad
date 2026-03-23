@@ -28,6 +28,10 @@ public class SmtpEmailAdapter : IEmailService
 
             if (string.IsNullOrWhiteSpace(smtpHost) || string.IsNullOrWhiteSpace(smtpUser))
             {
+<<<<<<< HEAD
+=======
+               // _logger.LogWarning("Email configuration is missing. Email will not be sent.");
+>>>>>>> AnalisisSonarEstablishment
                 return false;
             }
 
@@ -43,10 +47,19 @@ public class SmtpEmailAdapter : IEmailService
             smtpClient.EnableSsl = true;
 
             await smtpClient.SendMailAsync(message);
+<<<<<<< HEAD
             return true;
         }
         catch 
         {
+=======
+           // _logger.LogInformation("Email sent successfully to {Email}", toEmail);
+            return true;
+        }
+        catch (Exception ex)
+        {
+            // _logger.LogError(ex, "Failed to send email to {Email}", toEmail);
+>>>>>>> AnalisisSonarEstablishment
             return false;
         }
     }

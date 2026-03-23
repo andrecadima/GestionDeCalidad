@@ -3,12 +3,19 @@ using MicroServicioUser.App.Services;
 using MicroServicioUser.Dom.Interfaces;
 using MicroServicoUser.Inf.Persistence;
 using MicroServicoUser.Inf.Repository;
+<<<<<<< HEAD
+=======
+using MicroServicioUser.App.Services;
+>>>>>>> AnalisisSonarEstablishment
 using MicroServicioUser.Dom.Entities;
 using MicroServicoUser.Inf.EmailAdapters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+<<<<<<< HEAD
 using System.Net;
 using System.Net.Http;
+=======
+>>>>>>> AnalisisSonarEstablishment
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +43,7 @@ var fromName = _configuration["Email:FromName"] ?? "Sistema de Pagos";
 var adapter = new SmtpEmailAdapter(
     new SmtpSettings
     {
+<<<<<<< HEAD
         Host = smtpHost!,
         Port = smtpPort,
         User = smtpUser!,
@@ -50,6 +58,23 @@ builder.Services.AddHttpClient("userApi", u =>
 {
     u.BaseAddress = new Uri(userApiUrl!);
 });
+=======
+        Host = smtpHost,
+        Port = smtpPort,
+        User = smtpUser,
+        Password = smtpPass,
+        FromEmail = fromEmail,
+        FromName = fromName
+    }
+);
+
+builder.Services.AddHttpClient("userApi", u => {
+    u.BaseAddress = new Uri("http://localhost:5249");
+}).ConfigurePrimaryHttpMessageHandler(() =>
+    new HttpClientHandler {
+        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+    });
+>>>>>>> AnalisisSonarEstablishment
 
 builder.Services.AddScoped<IEmailService, SmtpEmailAdapter>(sp => adapter);
 builder.Services.AddScoped<EmailService>();
@@ -64,7 +89,11 @@ builder.Services.AddSwaggerGen();
 
 // JWT Configuration
 var jwtSection = builder.Configuration.GetSection("Jwt");
+<<<<<<< HEAD
 var keyBytes = Encoding.UTF8.GetBytes(jwtSection["Key"]!);
+=======
+var keyBytes = Encoding.UTF8.GetBytes(jwtSection["Key"]);
+>>>>>>> AnalisisSonarEstablishment
 
 builder.Services
     .AddAuthentication(options =>
@@ -107,4 +136,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+<<<<<<< HEAD
 await app.RunAsync();
+=======
+app.Run();
+>>>>>>> AnalisisSonarEstablishment

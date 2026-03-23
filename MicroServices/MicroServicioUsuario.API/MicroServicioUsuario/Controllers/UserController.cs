@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Org.BouncyCastle.Bcpg.OpenPgp;
+<<<<<<< HEAD
 using System.ComponentModel.DataAnnotations;
 
 namespace MicroServicioUsuario.API.Controllers
@@ -37,6 +38,28 @@ namespace MicroServicioUsuario.API.Controllers
         public string ? Role { get; set; }
         [Required]
         public int? CreatedBy { get; set; }
+=======
+
+namespace MicroServicioUsuario.API.Controllers
+{
+    public class ChangePasswordDTO
+    {
+        public int UserId { get; set; }
+        public string CurrentPassword { get; set;  }
+        public string NewPassword{ get; set; }
+    }
+    public class LoginDTO{
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+    
+    public class RegisterDTO{
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Role { get; set; }
+        public int CreatedBy { get; set; }
+>>>>>>> AnalisisSonarEstablishment
     }
     
     [Route("api/[controller]")]
@@ -61,6 +84,7 @@ namespace MicroServicioUsuario.API.Controllers
             
         [HttpPost("change-password")]
         [AllowAnonymous]
+<<<<<<< HEAD
         public async Task<ActionResult<bool>> ChangePasswordFirstLogin([FromBody] ChangePasswordDto cpDTO)
         {
             if (!ModelState.IsValid)
@@ -98,10 +122,34 @@ namespace MicroServicioUsuario.API.Controllers
             }
 
             return Ok(new LoginResponse() { Error = obj.error, Ok = false });
+=======
+        public async Task<ActionResult<bool>> ChangePasswordFirstLogin([FromBody] ChangePasswordDTO cpDTO)
+        {
+            var res = await this.loginService.ChangePasswordFirstLogin(cpDTO.UserId, cpDTO.CurrentPassword,
+                cpDTO.NewPassword);
+            
+            return Ok(new {Ok = res.ok, Error = res.error});
+        }
+        [HttpPost("login")]
+        [AllowAnonymous] // Allow anonymous access for login
+        public async Task<ActionResult<bool>> Login([FromBody] LoginDTO loginDTO)
+        {
+            
+            var obj = await this.loginService.ValidateLogin(loginDTO.Username, loginDTO.Password);
+            if (obj.ok)
+            {
+                var result = await jwtService.GenerateToken((int)obj.userId, obj.role);
+                return Ok( 
+                    new LoginResponse(){Error = "", Ok = true, Token = result.Value, TokenType = "Bearer"}
+                    );
+            }
+            return Ok(new LoginResponse(  ){ Error = obj.error, Ok = false });
+>>>>>>> AnalisisSonarEstablishment
         }
         
         [HttpPost("register")]
         [AllowAnonymous] 
+<<<<<<< HEAD
       public async Task<ActionResult<bool>> Register([FromBody] RegisterDto registerDto)
         {
             if (!registerDto.CreatedBy.HasValue)
@@ -116,6 +164,12 @@ namespace MicroServicioUsuario.API.Controllers
                 registerDto.CreatedBy.Value
             );
             return Ok(new { Ok = obj.ok, Error = obj.error });
+=======
+        public async Task<ActionResult<bool>> Register([FromBody] RegisterDTO registerDto)
+        {
+            var obj = await this.registrationService.RegisterUser(registerDto.FirstName, registerDto.LastName, registerDto.Email, registerDto.Role, registerDto.CreatedBy);
+            return Ok(new {Ok=obj.ok, Error=obj.error});
+>>>>>>> AnalisisSonarEstablishment
         }
             
         [HttpGet("select")]

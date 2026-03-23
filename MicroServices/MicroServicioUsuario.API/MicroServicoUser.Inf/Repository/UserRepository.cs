@@ -10,17 +10,27 @@ namespace MicroServicoUser.Inf.Repository
     {
         public int Id { get; set; }
     }
+<<<<<<< HEAD
 
     public class UserRepository : IRepository
     {
         private readonly MySqlConnectionManager _dbConnectionManager;
 
+=======
+    public class UserRepository : IRepository
+    {
+        private readonly MySqlConnectionManager _dbConnectionManager;
+>>>>>>> AnalisisSonarEstablishment
         public UserRepository(MySqlConnectionManager dbConnectionManager)
         {
             _dbConnectionManager = dbConnectionManager;
         }
 
+<<<<<<< HEAD
         public Task<Result<IEnumerable<User>>> GetAll()
+=======
+        public async Task<Result<IEnumerable<User>>> GetAll()
+>>>>>>> AnalisisSonarEstablishment
         {
             string query = @"
                 SELECT
@@ -28,7 +38,11 @@ namespace MicroServicoUser.Inf.Repository
                     username      AS Username,
                     password_hash AS PasswordHash,
                     first_name    AS FirstName,
+<<<<<<< HEAD
                     first_last_name AS LastName,
+=======
+                    first_last_name     AS LastName,
+>>>>>>> AnalisisSonarEstablishment
                     email         AS Email,
                     role          AS Role,
                     created_by    AS CreatedBy,
@@ -39,6 +53,7 @@ namespace MicroServicoUser.Inf.Repository
                 FROM user
                 WHERE status = TRUE
                 ORDER BY id DESC;";
+<<<<<<< HEAD
 
             try
             {
@@ -55,6 +70,21 @@ namespace MicroServicoUser.Inf.Repository
         }
 
         public Task<Result<int>> Insert(User model)
+=======
+            try
+            {
+                
+                return Result<IEnumerable<User>>.Success(_dbConnectionManager.ExecuteQuery<User>(query));
+            }
+            catch(Exception ex)
+            {
+                return Result<IEnumerable<User>>.Failure(ex.Message);
+            }
+            
+        }
+
+        public async Task<Result<int>> Insert(User model)
+>>>>>>> AnalisisSonarEstablishment
         {
             string query = @"
                 INSERT INTO user
@@ -85,6 +115,7 @@ namespace MicroServicoUser.Inf.Repository
                     @Status,
                     @FirstLogin
                 );";
+<<<<<<< HEAD
 
             try
             {
@@ -101,6 +132,18 @@ namespace MicroServicoUser.Inf.Repository
         }
 
         public Task<Result<int>> Update(User model)
+=======
+            try
+            {
+                return Result<int>.Success(_dbConnectionManager.ExecuteParameterizedNonQuery(query, model));
+            }
+            catch (Exception e)
+            {
+                return Result<int>.Failure(e.Message);
+            }
+        }
+        public async Task<Result<int>> Update(User model)
+>>>>>>> AnalisisSonarEstablishment
         {
             string query = @"
                 UPDATE user
@@ -108,6 +151,7 @@ namespace MicroServicoUser.Inf.Repository
                     username      = @Username,
                     password_hash = @PasswordHash,
                     first_name    = @FirstName,
+<<<<<<< HEAD
                     first_last_name = @LastName,
                     email         = @Email,
                     role          = @Role,
@@ -131,6 +175,27 @@ namespace MicroServicoUser.Inf.Repository
         }
 
         public Task<Result<IEnumerable<User>>> Search(string property)
+=======
+                    first_last_name     = @LastName,
+                    email         = @Email,
+                    role         = @Role,
+                    created_by    = @CreatedBy,
+                    first_login    = @FirstLogin,
+                    last_update   = CURRENT_TIMESTAMP
+                WHERE id = @Id;";
+            try
+            {
+                return Result<int>.Success(_dbConnectionManager.ExecuteParameterizedNonQuery(query, model));
+            }
+            catch (Exception e)
+            {
+                return Result<int>.Failure(e.Message);
+            }
+            
+        }
+
+        public async Task<Result<IEnumerable<User>>> Search(string property)
+>>>>>>> AnalisisSonarEstablishment
         {
             var probe = new User
             {
@@ -145,6 +210,7 @@ namespace MicroServicoUser.Inf.Repository
 
             const string query = @"
                 SELECT
+<<<<<<< HEAD
                     id,
                     username,
                     password_hash,
@@ -156,6 +222,19 @@ namespace MicroServicoUser.Inf.Repository
                     created_date,
                     last_update,
                     status,
+=======
+                    id            ,
+                    username      ,
+                    password_hash ,
+                    first_name    ,
+                    first_last_name     ,
+                    email         ,
+                    role          ,
+                    created_by    ,
+                    created_date  ,
+                    last_update   ,
+                    status        ,
+>>>>>>> AnalisisSonarEstablishment
                     first_login
                 FROM user
                 WHERE status = TRUE AND (
@@ -166,6 +245,7 @@ namespace MicroServicoUser.Inf.Repository
                     (@Role IS NOT NULL AND role LIKE CONCAT('%', @Role, '%'))
                 )
                 ORDER BY id DESC;";
+<<<<<<< HEAD
 
             try
             {
@@ -182,6 +262,19 @@ namespace MicroServicoUser.Inf.Repository
         }
 
         public Task<Result<User?>> GetById(int id)
+=======
+            try
+            {
+                return Result<IEnumerable<User>>.Success(_dbConnectionManager.ExecuteParameterizedQuery<User>(query, probe));
+            }
+            catch (Exception e)
+            {
+                return Result<IEnumerable<User>>.Failure(e.Message);
+            }
+        }
+
+        public async Task<Result<User?>> GetById(int id)
+>>>>>>> AnalisisSonarEstablishment
         {
             string query = @"
                 SELECT
@@ -189,7 +282,11 @@ namespace MicroServicoUser.Inf.Repository
                     username      AS Username,
                     password_hash AS PasswordHash,
                     first_name    AS FirstName,
+<<<<<<< HEAD
                     first_last_name AS LastName,
+=======
+                    first_last_name     AS LastName,
+>>>>>>> AnalisisSonarEstablishment
                     email         AS Email,
                     role          AS Role,
                     created_by    AS CreatedBy,
@@ -202,6 +299,7 @@ namespace MicroServicoUser.Inf.Repository
                 LIMIT 1;";
 
             var model = new User { Id = id };
+<<<<<<< HEAD
 
             try
             {
@@ -220,6 +318,20 @@ namespace MicroServicoUser.Inf.Repository
         }
 
         public Task<Result<User?>> GetByUsername(string username)
+=======
+            try
+            {
+                var res = Result<User?>.Success(_dbConnectionManager.ExecuteParameterizedQuery<User>(query, model).FirstOrDefault());
+                return res;
+            }
+            catch (Exception e)
+            {
+                return Result<User?>.Failure(e.Message);
+            }
+        }
+
+        public async Task<Result<User?>> GetByUsername(string username)
+>>>>>>> AnalisisSonarEstablishment
         {
             const string sql = @"
                 SELECT
@@ -227,7 +339,11 @@ namespace MicroServicoUser.Inf.Repository
                     username      AS Username,
                     password_hash AS PasswordHash,
                     first_name    AS FirstName,
+<<<<<<< HEAD
                     first_last_name AS LastName,
+=======
+                    first_last_name     AS LastName,
+>>>>>>> AnalisisSonarEstablishment
                     email         AS Email,
                     role          AS Role,
                     created_by    AS CreatedBy,
@@ -238,6 +354,7 @@ namespace MicroServicoUser.Inf.Repository
                 FROM user
                 WHERE username = @Username
                 LIMIT 1;";
+<<<<<<< HEAD
 
             var probe = new User { Username = username };
 
@@ -258,12 +375,27 @@ namespace MicroServicoUser.Inf.Repository
         }
 
         public Task<Result<int>> Delete(int id)
+=======
+            var probe = new User { Username = username };
+            try
+            {
+                return Result<User?>.Success(_dbConnectionManager.ExecuteParameterizedQuery<User>(sql, probe).FirstOrDefault());
+
+            }
+            catch (Exception e)
+            {
+                return Result<User?>.Failure(e.Message);
+            }
+        }
+        public async Task<Result<int>> Delete(int id)
+>>>>>>> AnalisisSonarEstablishment
         {
             string query = @"
                 UPDATE user
                 SET last_update = CURRENT_TIMESTAMP,
                     status = FALSE
                 WHERE id = @Id;";
+<<<<<<< HEAD
 
             try
             {
@@ -282,3 +414,16 @@ namespace MicroServicoUser.Inf.Repository
         }
     }
 }
+=======
+            try
+            {
+                return Result<int>.Success(_dbConnectionManager.ExecuteParameterizedNonQuery(query, new IdDto() { Id = id}));
+            }
+            catch (Exception e)
+            {
+                return Result<int>.Failure(e.Message);
+            }
+        }
+    }
+}
+>>>>>>> AnalisisSonarEstablishment

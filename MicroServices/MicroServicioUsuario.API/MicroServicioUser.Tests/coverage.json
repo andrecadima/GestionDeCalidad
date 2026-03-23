@@ -1,0 +1,3054 @@
+{
+  "MicroServicioUser.App.dll": {
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.App\\Services\\EmailService.cs": {
+      "MicroServicioUser.App.Services.EmailService": {
+        "System.Void MicroServicioUser.App.Services.EmailService::.ctor(MicroServicioUser.Dom.Interfaces.IEmailService)": {
+          "Lines": {
+            "14": 16,
+            "15": 16,
+            "16": 16,
+            "17": 16
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.EmailService/<SendEmailAsync>d__2": {
+        "System.Void MicroServicioUser.App.Services.EmailService/<SendEmailAsync>d__2::MoveNext()": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.EmailService/<SendNewUserCredentialsAsync>d__3": {
+        "System.Void MicroServicioUser.App.Services.EmailService/<SendNewUserCredentialsAsync>d__3::MoveNext()": {
+          "Lines": {
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "61": 1,
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "65": 1,
+            "66": 1,
+            "67": 1,
+            "68": 1,
+            "69": 1,
+            "70": 1,
+            "71": 1,
+            "72": 1,
+            "73": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1,
+            "77": 1,
+            "78": 1,
+            "79": 1,
+            "80": 1,
+            "81": 1,
+            "82": 1,
+            "83": 1,
+            "84": 1,
+            "85": 1,
+            "87": 1,
+            "88": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.App\\Services\\JwtService.cs": {
+      "MicroServicioUser.App.Services.JwtService": {
+        "System.Threading.Tasks.Task`1<MicroServicioUser.Dom.Patterns.Result`1<System.String>> MicroServicioUser.App.Services.JwtService::GenerateToken(System.Int32,System.String)": {
+          "Lines": {
+            "18": 6,
+            "19": 6,
+            "21": 6,
+            "22": 6,
+            "24": 5,
+            "25": 5,
+            "27": 4,
+            "28": 4,
+            "30": 3,
+            "31": 3,
+            "33": 2,
+            "34": 2,
+            "36": 2,
+            "37": 2,
+            "38": 2,
+            "39": 2,
+            "40": 2,
+            "41": 2,
+            "43": 2,
+            "44": 2,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "52": 2,
+            "54": 2,
+            "55": 2
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 21,
+              "Offset": 30,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 5
+            },
+            {
+              "Line": 24,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 24,
+              "Offset": 57,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 27,
+              "Offset": 84,
+              "EndOffset": 86,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 27,
+              "Offset": 84,
+              "EndOffset": 98,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 3
+            },
+            {
+              "Line": 30,
+              "Offset": 111,
+              "EndOffset": 113,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 30,
+              "Offset": 111,
+              "EndOffset": 125,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void MicroServicioUser.App.Services.JwtService::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "15": 12
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.App\\Services\\LoginService.cs": {
+      "MicroServicioUser.App.Services.LoginService": {
+        "System.Void MicroServicioUser.App.Services.LoginService::.ctor(MicroServicioUser.Dom.Interfaces.ILogin)": {
+          "Lines": {
+            "8": 16,
+            "9": 16,
+            "10": 16,
+            "11": 16
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.LoginService/<ChangePassword>d__2": {
+        "System.Void MicroServicioUser.App.Services.LoginService/<ChangePassword>d__2::MoveNext()": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.LoginService/<ChangePasswordFirstLogin>d__3": {
+        "System.Void MicroServicioUser.App.Services.LoginService/<ChangePasswordFirstLogin>d__3::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.LoginService/<ValidateLogin>d__4": {
+        "System.Void MicroServicioUser.App.Services.LoginService/<ValidateLogin>d__4::MoveNext()": {
+          "Lines": {
+            "26": 3,
+            "27": 3,
+            "28": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.App\\Services\\RegistrationService.cs": {
+      "MicroServicioUser.App.Services.RegistrationService": {
+        "System.Void MicroServicioUser.App.Services.RegistrationService::.ctor(MicroServicioUser.Dom.Interfaces.IRegistration,MicroServicioUser.App.Services.EmailService)": {
+          "Lines": {
+            "19": 18,
+            "20": 18,
+            "21": 18,
+            "22": 18,
+            "23": 18
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.RegistrationService/<>c__DisplayClass3_0/<<RegisterUser>b__0>d": {
+        "System.Void MicroServicioUser.App.Services.RegistrationService/<>c__DisplayClass3_0/<<RegisterUser>b__0>d::MoveNext()": {
+          "Lines": {
+            "32": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 2
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.RegistrationService/<RegisterUser>d__3": {
+        "System.Void MicroServicioUser.App.Services.RegistrationService/<RegisterUser>d__3::MoveNext()": {
+          "Lines": {
+            "26": 2,
+            "27": 2,
+            "28": 2,
+            "29": 1,
+            "31": 1,
+            "33": 1,
+            "47": 1,
+            "48": 2
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 358,
+              "EndOffset": 360,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 28,
+              "Offset": 358,
+              "EndOffset": 377,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.App\\Services\\UserService.cs": {
+      "MicroServicioUser.App.Services.UserService": {
+        "System.Void MicroServicioUser.App.Services.UserService::.ctor(MicroServicioUser.Dom.Interfaces.IRepository)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.UserService/<Delete>d__5": {
+        "System.Void MicroServicioUser.App.Services.UserService/<Delete>d__5::MoveNext()": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.UserService/<GetAll>d__6": {
+        "System.Void MicroServicioUser.App.Services.UserService/<GetAll>d__6::MoveNext()": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.UserService/<GetById>d__4": {
+        "System.Void MicroServicioUser.App.Services.UserService/<GetById>d__4::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.UserService/<Insert>d__2": {
+        "System.Void MicroServicioUser.App.Services.UserService/<Insert>d__2::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.UserService/<Search>d__7": {
+        "System.Void MicroServicioUser.App.Services.UserService/<Search>d__7::MoveNext()": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUser.App.Services.UserService/<Update>d__3": {
+        "System.Void MicroServicioUser.App.Services.UserService/<Update>d__3::MoveNext()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "MicroServicioUser.Dom.dll": {
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.Dom\\Rules\\PasswordValidator.cs": {
+      "MicroServicioUser.Dom.Rules.PasswordValidator": {
+        "System.ValueTuple`2<System.Boolean,System.String> MicroServicioUser.Dom.Rules.PasswordValidator::Validate(System.String)": {
+          "Lines": {
+            "14": 10,
+            "15": 10,
+            "16": 1,
+            "19": 9,
+            "20": 9,
+            "21": 6,
+            "22": 3,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "28": 3,
+            "29": 10
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 15,
+              "Offset": 9,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 9
+            },
+            {
+              "Line": 20,
+              "Offset": 43,
+              "EndOffset": 45,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 6
+            },
+            {
+              "Line": 20,
+              "Offset": 43,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void MicroServicioUser.Dom.Rules.PasswordValidator::.cctor()": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.Dom\\Patterns\\Result.cs": {
+      "MicroServicioUser.Dom.Patterns.Result": {
+        "System.Boolean MicroServicioUser.Dom.Patterns.Result::get_IsSuccess()": {
+          "Lines": {
+            "5": 27
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> MicroServicioUser.Dom.Patterns.Result::get_Errors()": {
+          "Lines": {
+            "6": 7
+          },
+          "Branches": []
+        },
+        "System.Boolean MicroServicioUser.Dom.Patterns.Result::get_IsFailure()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        },
+        "MicroServicioUser.Dom.Patterns.Result MicroServicioUser.Dom.Patterns.Result::Success()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "MicroServicioUser.Dom.Patterns.Result MicroServicioUser.Dom.Patterns.Result::Failure(System.String[])": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void MicroServicioUser.Dom.Patterns.Result::.ctor(System.Boolean,System.Collections.Generic.List`1<System.String>)": {
+          "Lines": {
+            "10": 35,
+            "11": 35,
+            "12": 35,
+            "13": 35,
+            "14": 35
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 13,
+              "Offset": 18,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 35
+            }
+          ]
+        }
+      },
+      "MicroServicioUser.Dom.Patterns.Result`1": {
+        "T MicroServicioUser.Dom.Patterns.Result`1::get_Value()": {
+          "Lines": {
+            "22": 29
+          },
+          "Branches": []
+        },
+        "MicroServicioUser.Dom.Patterns.Result`1<T> MicroServicioUser.Dom.Patterns.Result`1::Success(T)": {
+          "Lines": {
+            "29": 27
+          },
+          "Branches": []
+        },
+        "MicroServicioUser.Dom.Patterns.Result`1<T> MicroServicioUser.Dom.Patterns.Result`1::Failure(System.String[])": {
+          "Lines": {
+            "30": 8
+          },
+          "Branches": []
+        },
+        "System.Void MicroServicioUser.Dom.Patterns.Result`1::.ctor(System.Boolean,T,System.Collections.Generic.List`1<System.String>)": {
+          "Lines": {
+            "25": 35,
+            "26": 35,
+            "27": 35,
+            "28": 35
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.Dom\\Entities\\User.cs": {
+      "MicroServicioUser.Dom.Entities.User": {
+        "System.Int32 MicroServicioUser.Dom.Entities.User::get_Id()": {
+          "Lines": {
+            "7": 35
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Entities.User::get_Username()": {
+          "Lines": {
+            "12": 25
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Entities.User::get_PasswordHash()": {
+          "Lines": {
+            "16": 28
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Entities.User::get_FirstName()": {
+          "Lines": {
+            "21": 13
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Entities.User::get_SecondName()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Entities.User::get_LastName()": {
+          "Lines": {
+            "30": 13
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Entities.User::get_SecondLastName()": {
+          "Lines": {
+            "33": 0
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Entities.User::get_Email()": {
+          "Lines": {
+            "39": 14
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Entities.User::get_Role()": {
+          "Lines": {
+            "42": 15
+          },
+          "Branches": []
+        },
+        "System.Int32 MicroServicioUser.Dom.Entities.User::get_CreatedBy()": {
+          "Lines": {
+            "44": 14
+          },
+          "Branches": []
+        },
+        "System.DateTime MicroServicioUser.Dom.Entities.User::get_CreatedDate()": {
+          "Lines": {
+            "45": 13
+          },
+          "Branches": []
+        },
+        "System.DateTime MicroServicioUser.Dom.Entities.User::get_LastUpdate()": {
+          "Lines": {
+            "46": 15
+          },
+          "Branches": []
+        },
+        "System.Boolean MicroServicioUser.Dom.Entities.User::get_Status()": {
+          "Lines": {
+            "47": 16
+          },
+          "Branches": []
+        },
+        "System.Int32 MicroServicioUser.Dom.Entities.User::get_FirstLogin()": {
+          "Lines": {
+            "48": 19
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUser.Dom\\Dto\\LoginResponse.cs": {
+      "MicroServicioUser.Dom.Dto.LoginResponse": {
+        "System.Boolean MicroServicioUser.Dom.Dto.LoginResponse::get_Ok()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Dto.LoginResponse::get_Error()": {
+          "Lines": {
+            "10": 3
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Dto.LoginResponse::get_Token()": {
+          "Lines": {
+            "12": 1
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUser.Dom.Dto.LoginResponse::get_TokenType()": {
+          "Lines": {
+            "14": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "MicroServicioUsuario.API.dll": {
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUsuario\\Program.cs": {
+      "Program/<<Main>$>d__0": {
+        "System.Void Program/<<Main>$>d__0::MoveNext()": {
+          "Lines": {
+            "13": 0,
+            "18": 0,
+            "19": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "94": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "103": 0,
+            "105": 0,
+            "106": 0,
+            "108": 0,
+            "110": 0
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 232,
+              "EndOffset": 234,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 232,
+              "EndOffset": 240,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 334,
+              "EndOffset": 336,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 334,
+              "EndOffset": 342,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 97,
+              "Offset": 845,
+              "EndOffset": 847,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 97,
+              "Offset": 845,
+              "EndOffset": 875,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUsuario\\WeatherForecast.cs": {
+      "MicroServicioUsuario.WeatherForecast": {
+        "System.DateOnly MicroServicioUsuario.WeatherForecast::get_Date()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 MicroServicioUsuario.WeatherForecast::get_TemperatureC()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 MicroServicioUsuario.WeatherForecast::get_TemperatureF()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUsuario.WeatherForecast::get_Summary()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUsuario\\Controllers\\WeatherForecastController.cs": {
+      "MicroServicioUsuario.Controllers.WeatherForecastController": {
+        "System.Collections.Generic.IEnumerable`1<MicroServicioUsuario.WeatherForecast> MicroServicioUsuario.Controllers.WeatherForecastController::Get()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Void MicroServicioUsuario.Controllers.WeatherForecastController::.ctor(Microsoft.Extensions.Logging.ILogger`1<MicroServicioUsuario.Controllers.WeatherForecastController>)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void MicroServicioUsuario.Controllers.WeatherForecastController::.cctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicioUsuario\\Controllers\\UserController.cs": {
+      "MicroServicioUsuario.API.Controllers.ChangePasswordDto": {
+        "System.Nullable`1<System.Int32> MicroServicioUsuario.API.Controllers.ChangePasswordDto::get_Id()": {
+          "Lines": {
+            "17": 2
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUsuario.API.Controllers.ChangePasswordDto::get_CurrentPassword()": {
+          "Lines": {
+            "19": 1
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUsuario.API.Controllers.ChangePasswordDto::get_NewPassword()": {
+          "Lines": {
+            "21": 1
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.LoginDto": {
+        "System.String MicroServicioUsuario.API.Controllers.LoginDto::get_Username()": {
+          "Lines": {
+            "25": 6
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUsuario.API.Controllers.LoginDto::get_Password()": {
+          "Lines": {
+            "27": 6
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.RegisterDto": {
+        "System.String MicroServicioUsuario.API.Controllers.RegisterDto::get_FirstName()": {
+          "Lines": {
+            "32": 1
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUsuario.API.Controllers.RegisterDto::get_LastName()": {
+          "Lines": {
+            "34": 1
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUsuario.API.Controllers.RegisterDto::get_Email()": {
+          "Lines": {
+            "35": 1
+          },
+          "Branches": []
+        },
+        "System.String MicroServicioUsuario.API.Controllers.RegisterDto::get_Role()": {
+          "Lines": {
+            "37": 1
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> MicroServicioUsuario.API.Controllers.RegisterDto::get_CreatedBy()": {
+          "Lines": {
+            "39": 2
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController::.ctor(MicroServicioUser.Dom.Interfaces.IRepositoryService`1<MicroServicioUser.Dom.Entities.User>,MicroServicioUser.App.Services.LoginService,MicroServicioUser.App.Services.RegistrationService,MicroServicioUser.Dom.Interfaces.IJwtService)": {
+          "Lines": {
+            "52": 16,
+            "53": 16,
+            "54": 16,
+            "55": 16,
+            "56": 16,
+            "57": 16,
+            "58": 16,
+            "59": 16
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<>c": {
+        "System.Boolean MicroServicioUsuario.API.Controllers.UserController/<>c::<Update>b__12_0(System.String)": {
+          "Lines": {
+            "236": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean MicroServicioUsuario.API.Controllers.UserController/<>c::<Delete>b__13_0(System.String)": {
+          "Lines": {
+            "270": 2
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<ChangePasswordFirstLogin>d__5": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<ChangePasswordFirstLogin>d__5::MoveNext()": {
+          "Lines": {
+            "65": 2,
+            "66": 2,
+            "67": 1,
+            "69": 1,
+            "70": 1,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0,
+            "79": 2
+          },
+          "Branches": [
+            {
+              "Line": 66,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 66,
+              "Offset": 39,
+              "EndOffset": 74,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 69,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 69,
+              "Offset": 99,
+              "EndOffset": 134,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<Create>d__11": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<Create>d__11::MoveNext()": {
+          "Lines": {
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "188": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "211": 0
+          },
+          "Branches": [
+            {
+              "Line": 183,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 183,
+              "Offset": 39,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 190,
+              "Offset": 222,
+              "EndOffset": 224,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 190,
+              "Offset": 222,
+              "EndOffset": 287,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<Delete>d__13": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<Delete>d__13::MoveNext()": {
+          "Lines": {
+            "258": 2,
+            "259": 2,
+            "261": 2,
+            "262": 1,
+            "263": 1,
+            "264": 1,
+            "265": 1,
+            "266": 1,
+            "269": 1,
+            "271": 1,
+            "272": 1,
+            "273": 1,
+            "274": 1,
+            "275": 1,
+            "278": 0,
+            "279": 0,
+            "280": 0,
+            "281": 0,
+            "282": 0,
+            "283": 0,
+            "286": 2
+          },
+          "Branches": [
+            {
+              "Line": 261,
+              "Offset": 166,
+              "EndOffset": 168,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 261,
+              "Offset": 166,
+              "EndOffset": 248,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 270,
+              "Offset": 300,
+              "EndOffset": 302,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 270,
+              "Offset": 300,
+              "EndOffset": 379,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<GetById>d__9": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<GetById>d__9::MoveNext()": {
+          "Lines": {
+            "142": 2,
+            "143": 2,
+            "144": 2,
+            "145": 1,
+            "146": 1,
+            "149": 1,
+            "150": 1,
+            "151": 1,
+            "152": 1,
+            "153": 1,
+            "154": 1,
+            "156": 2
+          },
+          "Branches": [
+            {
+              "Line": 144,
+              "Offset": 166,
+              "EndOffset": 168,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 144,
+              "Offset": 166,
+              "EndOffset": 199,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<Login>d__6": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<Login>d__6::MoveNext()": {
+          "Lines": {
+            "83": 3,
+            "85": 3,
+            "87": 3,
+            "88": 1,
+            "89": 1,
+            "91": 1,
+            "92": 1,
+            "93": 1,
+            "94": 1,
+            "95": 1,
+            "96": 1,
+            "97": 1,
+            "100": 2,
+            "101": 3
+          },
+          "Branches": [
+            {
+              "Line": 87,
+              "Offset": 194,
+              "EndOffset": 196,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 87,
+              "Offset": 207,
+              "EndOffset": 209,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 87,
+              "Offset": 194,
+              "EndOffset": 227,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 87,
+              "Offset": 207,
+              "EndOffset": 227,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 87,
+              "Offset": 232,
+              "EndOffset": 237,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 87,
+              "Offset": 232,
+              "EndOffset": 472,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<Register>d__7": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<Register>d__7::MoveNext()": {
+          "Lines": {
+            "106": 1,
+            "107": 1,
+            "108": 1,
+            "109": 1,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 1
+          },
+          "Branches": [
+            {
+              "Line": 107,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 107,
+              "Offset": 42,
+              "EndOffset": 78,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<Search>d__10": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<Search>d__10::MoveNext()": {
+          "Lines": {
+            "162": 2,
+            "163": 2,
+            "164": 2,
+            "165": 1,
+            "166": 1,
+            "169": 1,
+            "170": 1,
+            "171": 1,
+            "172": 1,
+            "173": 1,
+            "174": 1,
+            "176": 2
+          },
+          "Branches": [
+            {
+              "Line": 164,
+              "Offset": 166,
+              "EndOffset": 168,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 164,
+              "Offset": 166,
+              "EndOffset": 199,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<Select>d__8": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<Select>d__8::MoveNext()": {
+          "Lines": {
+            "123": 2,
+            "124": 2,
+            "125": 2,
+            "126": 1,
+            "127": 1,
+            "130": 1,
+            "131": 1,
+            "132": 1,
+            "133": 1,
+            "134": 1,
+            "135": 1,
+            "137": 2
+          },
+          "Branches": [
+            {
+              "Line": 125,
+              "Offset": 160,
+              "EndOffset": 162,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 125,
+              "Offset": 160,
+              "EndOffset": 193,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "MicroServicioUsuario.API.Controllers.UserController/<Update>d__12": {
+        "System.Void MicroServicioUsuario.API.Controllers.UserController/<Update>d__12::MoveNext()": {
+          "Lines": {
+            "217": 2,
+            "219": 2,
+            "220": 0,
+            "221": 0,
+            "224": 2,
+            "226": 2,
+            "227": 1,
+            "228": 1,
+            "229": 1,
+            "230": 1,
+            "231": 1,
+            "232": 1,
+            "235": 1,
+            "237": 1,
+            "238": 1,
+            "239": 1,
+            "240": 1,
+            "241": 1,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0,
+            "248": 0,
+            "249": 0,
+            "252": 2
+          },
+          "Branches": [
+            {
+              "Line": 219,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 219,
+              "Offset": 39,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 226,
+              "Offset": 222,
+              "EndOffset": 224,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 226,
+              "Offset": 222,
+              "EndOffset": 258,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 236,
+              "Offset": 310,
+              "EndOffset": 312,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 236,
+              "Offset": 310,
+              "EndOffset": 394,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "MicroServicoUser.Inf.dll": {
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\Repository\\AuthenticationRoles.cs": {
+      "MicroServicoUser.Inf.Repository.AuthenticationRoles": {
+        "System.Collections.Generic.IReadOnlyDictionary`2<System.String,System.Int32> MicroServicoUser.Inf.Repository.AuthenticationRoles::get_RoleToCode()": {
+          "Lines": {
+            "9": 13
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> MicroServicoUser.Inf.Repository.AuthenticationRoles::get_CodeToRole()": {
+          "Lines": {
+            "17": 4
+          },
+          "Branches": []
+        },
+        "System.Void MicroServicoUser.Inf.Repository.AuthenticationRoles::.cctor()": {
+          "Lines": {
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "18": 1,
+            "19": 5
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\Repository\\Login.cs": {
+      "MicroServicoUser.Inf.Repository.Login": {
+        "System.Void MicroServicoUser.Inf.Repository.Login::.ctor(MicroServicioUser.Dom.Interfaces.IRepository)": {
+          "Lines": {
+            "9": 9,
+            "10": 9,
+            "11": 9,
+            "12": 9
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicoUser.Inf.Repository.Login/<ChangePassword>d__2": {
+        "System.Void MicroServicoUser.Inf.Repository.Login/<ChangePassword>d__2::MoveNext()": {
+          "Lines": {
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "18": 1,
+            "20": 3,
+            "23": 3,
+            "24": 1,
+            "27": 2,
+            "28": 2,
+            "29": 0,
+            "32": 2,
+            "33": 1,
+            "36": 1,
+            "37": 1,
+            "39": 1,
+            "40": 1,
+            "41": 0,
+            "43": 1,
+            "44": 4
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 173,
+              "EndOffset": 175,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 17,
+              "Offset": 173,
+              "EndOffset": 191,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 196,
+              "EndOffset": 198,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 196,
+              "EndOffset": 215,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 23,
+              "Offset": 261,
+              "EndOffset": 263,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 261,
+              "EndOffset": 280,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 28,
+              "Offset": 315,
+              "EndOffset": 317,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 315,
+              "EndOffset": 340,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 366,
+              "EndOffset": 368,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            },
+            {
+              "Line": 32,
+              "Offset": 366,
+              "EndOffset": 385,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 582,
+              "EndOffset": 584,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 582,
+              "EndOffset": 614,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "MicroServicoUser.Inf.Repository.Login/<ChangePasswordFirstLogin>d__3": {
+        "System.Void MicroServicoUser.Inf.Repository.Login/<ChangePasswordFirstLogin>d__3::MoveNext()": {
+          "Lines": {
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 0,
+            "52": 2,
+            "54": 2,
+            "55": 1,
+            "57": 1,
+            "58": 0,
+            "60": 1,
+            "61": 0,
+            "63": 1,
+            "64": 1,
+            "65": 1,
+            "67": 1,
+            "68": 1,
+            "69": 0,
+            "71": 1,
+            "72": 2
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 173,
+              "EndOffset": 175,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 49,
+              "Offset": 173,
+              "EndOffset": 191,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 196,
+              "EndOffset": 198,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 196,
+              "EndOffset": 215,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 54,
+              "Offset": 253,
+              "EndOffset": 255,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 54,
+              "Offset": 253,
+              "EndOffset": 272,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 57,
+              "Offset": 301,
+              "EndOffset": 303,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 301,
+              "EndOffset": 320,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 60,
+              "Offset": 346,
+              "EndOffset": 348,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 60,
+              "Offset": 346,
+              "EndOffset": 365,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 1
+            },
+            {
+              "Line": 68,
+              "Offset": 575,
+              "EndOffset": 577,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 68,
+              "Offset": 575,
+              "EndOffset": 607,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "MicroServicoUser.Inf.Repository.Login/<ValidateLogin>d__4": {
+        "System.Void MicroServicoUser.Inf.Repository.Login/<ValidateLogin>d__4::MoveNext()": {
+          "Lines": {
+            "77": 3,
+            "78": 3,
+            "79": 3,
+            "80": 1,
+            "82": 2,
+            "84": 2,
+            "85": 1,
+            "88": 1,
+            "89": 1,
+            "90": 1,
+            "91": 1,
+            "92": 1,
+            "94": 1,
+            "95": 3
+          },
+          "Branches": [
+            {
+              "Line": 79,
+              "Offset": 162,
+              "EndOffset": 164,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 79,
+              "Offset": 175,
+              "EndOffset": 177,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 79,
+              "Offset": 162,
+              "EndOffset": 198,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 79,
+              "Offset": 175,
+              "EndOffset": 198,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 79,
+              "Offset": 203,
+              "EndOffset": 205,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 80,
+              "Offset": 234,
+              "EndOffset": 236,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 80,
+              "Offset": 234,
+              "EndOffset": 242,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 79,
+              "Offset": 203,
+              "EndOffset": 254,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 84,
+              "Offset": 300,
+              "EndOffset": 302,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            },
+            {
+              "Line": 84,
+              "Offset": 300,
+              "EndOffset": 331,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 1
+            },
+            {
+              "Line": 89,
+              "Offset": 365,
+              "EndOffset": 367,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 1
+            },
+            {
+              "Line": 89,
+              "Offset": 365,
+              "EndOffset": 385,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 390,
+              "EndOffset": 392,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 1
+            },
+            {
+              "Line": 89,
+              "Offset": 390,
+              "EndOffset": 416,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\Repository\\Registration.cs": {
+      "MicroServicoUser.Inf.Repository.RegistrationHelpers": {
+        "System.String MicroServicoUser.Inf.Repository.RegistrationHelpers::HashPassword(System.String)": {
+          "Lines": {
+            "20": 15,
+            "21": 15,
+            "23": 15,
+            "24": 15,
+            "25": 15,
+            "26": 15,
+            "27": 15,
+            "28": 15,
+            "30": 15,
+            "32": 15,
+            "33": 15
+          },
+          "Branches": []
+        },
+        "System.Boolean MicroServicoUser.Inf.Repository.RegistrationHelpers::VerifyPassword(System.String,System.String)": {
+          "Lines": {
+            "36": 12,
+            "37": 12,
+            "38": 12,
+            "39": 0,
+            "41": 12,
+            "42": 0,
+            "44": 12,
+            "45": 12,
+            "47": 12,
+            "48": 12,
+            "49": 12,
+            "50": 12,
+            "51": 12,
+            "52": 12,
+            "54": 12,
+            "56": 12,
+            "57": 12
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 25,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 12
+            },
+            {
+              "Line": 41,
+              "Offset": 49,
+              "EndOffset": 51,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 49,
+              "EndOffset": 56,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 12
+            }
+          ]
+        }
+      },
+      "MicroServicoUser.Inf.Repository.Registration": {
+        "System.String MicroServicoUser.Inf.Repository.Registration::<RegisterUser>g__RemoveDiacritics|3_0(System.String)": {
+          "Lines": {
+            "98": 11,
+            "99": 11,
+            "100": 0,
+            "102": 11,
+            "103": 11,
+            "105": 135,
+            "106": 51,
+            "107": 51,
+            "108": 51,
+            "109": 51,
+            "110": 51,
+            "112": 11,
+            "113": 11
+          },
+          "Branches": [
+            {
+              "Line": 99,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 99,
+              "Offset": 9,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 11
+            },
+            {
+              "Line": 105,
+              "Offset": 102,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 51
+            },
+            {
+              "Line": 108,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 51
+            },
+            {
+              "Line": 108,
+              "Offset": 75,
+              "EndOffset": 86,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 51
+            },
+            {
+              "Line": 105,
+              "Offset": 102,
+              "EndOffset": 104,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 11
+            }
+          ]
+        },
+        "System.String MicroServicoUser.Inf.Repository.Registration::<RegisterUser>g__SlugifyLetters|3_1(System.String)": {
+          "Lines": {
+            "116": 11,
+            "117": 11,
+            "118": 62,
+            "119": 11
+          },
+          "Branches": [
+            {
+              "Line": 118,
+              "Offset": 3,
+              "EndOffset": 5,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 44
+            },
+            {
+              "Line": 118,
+              "Offset": 3,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 7
+            }
+          ]
+        },
+        "System.Void MicroServicoUser.Inf.Repository.Registration::.ctor(MicroServicioUser.Dom.Interfaces.IRepository)": {
+          "Lines": {
+            "64": 7,
+            "65": 7,
+            "66": 7,
+            "67": 7
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicoUser.Inf.Repository.Registration/<GeneratePassword>d__2": {
+        "System.Void MicroServicoUser.Inf.Repository.Registration/<GeneratePassword>d__2::MoveNext()": {
+          "Lines": {
+            "70": 6,
+            "72": 6,
+            "74": 6,
+            "75": 132,
+            "76": 60,
+            "77": 60,
+            "78": 60,
+            "80": 6,
+            "81": 6
+          },
+          "Branches": [
+            {
+              "Line": 75,
+              "Offset": 135,
+              "EndOffset": 55,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 60
+            },
+            {
+              "Line": 75,
+              "Offset": 135,
+              "EndOffset": 137,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 6
+            }
+          ]
+        }
+      },
+      "MicroServicoUser.Inf.Repository.Registration/<RegisterUser>d__3": {
+        "System.Void MicroServicoUser.Inf.Repository.Registration/<RegisterUser>d__3::MoveNext()": {
+          "Lines": {
+            "89": 6,
+            "90": 6,
+            "91": 6,
+            "92": 6,
+            "93": 1,
+            "94": 1,
+            "121": 5,
+            "122": 5,
+            "125": 5,
+            "126": 4,
+            "127": 4,
+            "128": 4,
+            "130": 1,
+            "131": 1,
+            "132": 1,
+            "133": 1,
+            "134": 0,
+            "135": 1,
+            "137": 5,
+            "138": 5,
+            "140": 6,
+            "141": 1,
+            "142": 1,
+            "143": 1,
+            "144": 1,
+            "146": 5,
+            "148": 5,
+            "149": 5,
+            "150": 5,
+            "152": 5,
+            "153": 5,
+            "154": 5,
+            "155": 5,
+            "156": 5,
+            "157": 5,
+            "158": 5,
+            "159": 5,
+            "160": 5,
+            "161": 5,
+            "162": 5,
+            "163": 5,
+            "164": 5,
+            "165": 5,
+            "167": 5,
+            "168": 5,
+            "169": 1,
+            "171": 4,
+            "172": 6
+          },
+          "Branches": [
+            {
+              "Line": 90,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 90,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 5
+            },
+            {
+              "Line": 90,
+              "Offset": 54,
+              "EndOffset": 82,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 90,
+              "Offset": 67,
+              "EndOffset": 82,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 90,
+              "Offset": 85,
+              "EndOffset": 87,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 90,
+              "Offset": 85,
+              "EndOffset": 107,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 5
+            },
+            {
+              "Line": 125,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 4
+            },
+            {
+              "Line": 125,
+              "Offset": 164,
+              "EndOffset": 182,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 125,
+              "Offset": 185,
+              "EndOffset": 187,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 4
+            },
+            {
+              "Line": 125,
+              "Offset": 185,
+              "EndOffset": 226,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 1
+            },
+            {
+              "Line": 133,
+              "Offset": 281,
+              "EndOffset": 283,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 133,
+              "Offset": 281,
+              "EndOffset": 294,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 1
+            },
+            {
+              "Line": 140,
+              "Offset": 510,
+              "EndOffset": 323,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 1
+            },
+            {
+              "Line": 140,
+              "Offset": 510,
+              "EndOffset": 515,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 5
+            },
+            {
+              "Line": 148,
+              "Offset": 670,
+              "EndOffset": 672,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 148,
+              "Offset": 670,
+              "EndOffset": 675,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 5
+            },
+            {
+              "Line": 168,
+              "Offset": 1006,
+              "EndOffset": 1008,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 1
+            },
+            {
+              "Line": 168,
+              "Offset": 1006,
+              "EndOffset": 1036,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 4
+            }
+          ]
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\Repository\\UserRepository.cs": {
+      "MicroServicoUser.Inf.Repository.IdDto": {
+        "System.Int32 MicroServicoUser.Inf.Repository.IdDto::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicoUser.Inf.Repository.UserRepository": {
+        "System.Threading.Tasks.Task`1<MicroServicioUser.Dom.Patterns.Result`1<System.Collections.Generic.IEnumerable`1<MicroServicioUser.Dom.Entities.User>>> MicroServicoUser.Inf.Repository.UserRepository::GetAll()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<MicroServicioUser.Dom.Patterns.Result`1<System.Int32>> MicroServicoUser.Inf.Repository.UserRepository::Insert(MicroServicioUser.Dom.Entities.User)": {
+          "Lines": {
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "101": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<MicroServicioUser.Dom.Patterns.Result`1<System.Int32>> MicroServicoUser.Inf.Repository.UserRepository::Update(MicroServicioUser.Dom.Entities.User)": {
+          "Lines": {
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "131": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<MicroServicioUser.Dom.Patterns.Result`1<System.Collections.Generic.IEnumerable`1<MicroServicioUser.Dom.Entities.User>>> MicroServicoUser.Inf.Repository.UserRepository::Search(System.String)": {
+          "Lines": {
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "182": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<MicroServicioUser.Dom.Patterns.Result`1<MicroServicioUser.Dom.Entities.User>> MicroServicoUser.Inf.Repository.UserRepository::GetById(System.Int32)": {
+          "Lines": {
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "204": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "212": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "220": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<MicroServicioUser.Dom.Patterns.Result`1<MicroServicioUser.Dom.Entities.User>> MicroServicoUser.Inf.Repository.UserRepository::GetByUsername(System.String)": {
+          "Lines": {
+            "223": 0,
+            "242": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0,
+            "248": 0,
+            "249": 0,
+            "250": 0,
+            "252": 0,
+            "253": 0,
+            "254": 0,
+            "255": 0,
+            "256": 0,
+            "258": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<MicroServicioUser.Dom.Patterns.Result`1<System.Int32>> MicroServicoUser.Inf.Repository.UserRepository::Delete(System.Int32)": {
+          "Lines": {
+            "261": 0,
+            "262": 0,
+            "263": 0,
+            "264": 0,
+            "265": 0,
+            "266": 0,
+            "269": 0,
+            "270": 0,
+            "271": 0,
+            "272": 0,
+            "273": 0,
+            "274": 0,
+            "276": 0,
+            "277": 0,
+            "278": 0,
+            "279": 0,
+            "280": 0,
+            "282": 0
+          },
+          "Branches": []
+        },
+        "System.Void MicroServicoUser.Inf.Repository.UserRepository::.ctor(MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\Persistence\\MySqlConnectionDB.cs": {
+      "MicroServicoUser.Inf.Persistence.MySqlConnectionDB": {
+        "MySql.Data.MySqlClient.MySqlConnection MicroServicoUser.Inf.Persistence.MySqlConnectionDB::GetConnection()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Void MicroServicoUser.Inf.Persistence.MySqlConnectionDB::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 21,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\Persistence\\Database\\DbMapper.cs": {
+      "MicroServicoUser.Inf.Persistence.Database.DbMapper": {
+        "T MicroServicoUser.Inf.Persistence.Database.DbMapper::MapDataRowToModel(System.Data.DataRow)": {
+          "Lines": {
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "16": 21,
+            "17": 2,
+            "18": 2,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "34": 2,
+            "35": 2,
+            "37": 1,
+            "38": 1
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 16,
+              "Offset": 45,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 16,
+              "Offset": 279,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 2
+            },
+            {
+              "Line": 18,
+              "Offset": 125,
+              "EndOffset": 127,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 150,
+              "EndOffset": 152,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 150,
+              "EndOffset": 171,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 125,
+              "EndOffset": 202,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 31,
+              "Offset": 216,
+              "EndOffset": 218,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 31,
+              "Offset": 216,
+              "EndOffset": 226,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            },
+            {
+              "Line": 16,
+              "Offset": 279,
+              "EndOffset": 284,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<T> MicroServicoUser.Inf.Persistence.Database.DbMapper::MapDataTableToModelIterable(System.Data.DataTable)": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 43,
+              "Offset": 57,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\Persistence\\Database\\DbParameterHelper.cs": {
+      "MicroServicoUser.Inf.Persistence.Database.DbParameterHelper": {
+        "MySql.Data.MySqlClient.MySqlCommand MicroServicoUser.Inf.Persistence.Database.DbParameterHelper::PopulateCommandParameters(System.String,T)": {
+          "Lines": {
+            "17": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 2,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "33": 1,
+            "35": 1,
+            "36": 0,
+            "38": 1,
+            "40": 7,
+            "41": 2,
+            "42": 2,
+            "43": 5,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "52": 1,
+            "53": 1
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 24,
+              "EndOffset": 26,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 22,
+              "Offset": 24,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 99,
+              "EndOffset": 109,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 274,
+              "EndOffset": 139,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 2
+            },
+            {
+              "Line": 45,
+              "Offset": 217,
+              "EndOffset": 219,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 47,
+              "Offset": 234,
+              "EndOffset": 236,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 234,
+              "EndOffset": 242,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            },
+            {
+              "Line": 45,
+              "Offset": 217,
+              "EndOffset": 266,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 40,
+              "Offset": 274,
+              "EndOffset": 279,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void MicroServicoUser.Inf.Persistence.Database.DbParameterHelper::.cctor()": {
+          "Lines": {
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\Persistence\\Database\\MySqlConnectionManager.cs": {
+      "MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager": {
+        "MySql.Data.MySqlClient.MySqlConnection MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::CreateConnection()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<T> MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::ExecuteParameterizedQuery(System.String,T)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TOut> MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::ExecuteParameterizedQuery(System.String,TParam)": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<T> MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::ExecuteQuery(System.String)": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::ExecuteParameterizedNonQuery(System.String,T)": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::ExecuteNonQuery(System.String)": {
+          "Lines": {
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::ExecuteCommand(MySql.Data.MySqlClient.MySqlCommand)": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<T> MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::ExecuteCommand(MySql.Data.MySqlClient.MySqlCommand)": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "65": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": []
+        },
+        "System.Void MicroServicoUser.Inf.Persistence.Database.MySqlConnectionManager::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 13,
+              "Offset": 21,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\EmailAdapters\\SmtpEmailAdapter.cs": {
+      "MicroServicoUser.Inf.EmailAdapters.SmtpEmailAdapter": {
+        "System.Void MicroServicoUser.Inf.EmailAdapters.SmtpEmailAdapter::.ctor(MicroServicoUser.Inf.EmailAdapters.SmtpSettings)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "MicroServicoUser.Inf.EmailAdapters.SmtpEmailAdapter/<SendEmailAsync>d__2": {
+        "System.Void MicroServicoUser.Inf.EmailAdapters.SmtpEmailAdapter/<SendEmailAsync>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 170,
+              "EndOffset": 172,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 170,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 188,
+              "EndOffset": 190,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 188,
+              "EndOffset": 198,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 233,
+              "EndOffset": 235,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 233,
+              "EndOffset": 242,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\UCB\\YA CASI SEMESTER\\Gestion de Calidad -Course\\GestionDeCalidad\\MicroServices\\MicroServicioUsuario.API\\MicroServicoUser.Inf\\EmailAdapters\\SmtpSettings.cs": {
+      "MicroServicoUser.Inf.EmailAdapters.SmtpSettings": {
+        "System.String MicroServicoUser.Inf.EmailAdapters.SmtpSettings::get_Host()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 MicroServicoUser.Inf.EmailAdapters.SmtpSettings::get_Port()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String MicroServicoUser.Inf.EmailAdapters.SmtpSettings::get_User()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String MicroServicoUser.Inf.EmailAdapters.SmtpSettings::get_Password()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String MicroServicoUser.Inf.EmailAdapters.SmtpSettings::get_FromEmail()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.String MicroServicoUser.Inf.EmailAdapters.SmtpSettings::get_FromName()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

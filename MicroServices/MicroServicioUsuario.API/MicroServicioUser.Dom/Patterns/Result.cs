@@ -27,5 +27,9 @@ public class Result<T> : Result
         Value = value;
     }
     public static Result<T> Success(T value) => new Result<T>(true, value, new List<string>());
+<<<<<<< HEAD
     public new static Result<T> Failure(params string[] errors) => new Result<T>(false, default(T)!, new List<string>(errors));
+=======
+    public static Result<T> Failure(params string[] errors) => new Result<T>(false, default(T)!, new List<string>(errors));
+>>>>>>> AnalisisSonarEstablishment
 }

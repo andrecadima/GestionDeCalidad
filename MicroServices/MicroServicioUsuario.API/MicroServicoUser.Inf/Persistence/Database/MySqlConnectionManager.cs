@@ -7,6 +7,7 @@ namespace MicroServicoUser.Inf.Persistence.Database;
 public class MySqlConnectionManager
 {
     private readonly string _connectionString;
+<<<<<<< HEAD
 
     public MySqlConnectionManager(IConfiguration configuration)
     {
@@ -17,14 +18,27 @@ public class MySqlConnectionManager
     private MySqlConnection CreateConnection() => new(_connectionString);
 
     public IEnumerable<T> ExecuteParameterizedQuery<T>(string query, T model) where T : class, new()
+=======
+    public MySqlConnectionManager(IConfiguration configuration)
+    {
+        _connectionString = configuration.GetConnectionString("MysqlUserServicioDB");
+    }
+    private MySqlConnection CreateConnection() => new(_connectionString);
+
+    public IEnumerable<T> ExecuteParameterizedQuery<T>(string query, T model) where T : new()
+>>>>>>> AnalisisSonarEstablishment
     {
         using MySqlCommand command = DbParameterHelper.PopulateCommandParameters(query, model);
         return ExecuteCommand<T>(command);
     }
+<<<<<<< HEAD
 
     public IEnumerable<TOut> ExecuteParameterizedQuery<TOut, TParam>(string query, TParam model)
         where TOut : new()
         where TParam : class
+=======
+    public IEnumerable<TOut> ExecuteParameterizedQuery<TOut, TParam>(string query, TParam model) where TOut : new()
+>>>>>>> AnalisisSonarEstablishment
     {
         using MySqlCommand command = DbParameterHelper.PopulateCommandParameters(query, model);
         return ExecuteCommand<TOut>(command);
@@ -35,8 +49,12 @@ public class MySqlConnectionManager
         MySqlCommand command = new(query);
         return ExecuteCommand<T>(command);
     }
+<<<<<<< HEAD
 
     public int ExecuteParameterizedNonQuery<T>(string query, T model) where T : class
+=======
+    public int ExecuteParameterizedNonQuery<T>(string query, T model) where T : new()
+>>>>>>> AnalisisSonarEstablishment
     {
         using MySqlCommand command = DbParameterHelper.PopulateCommandParameters(query, model);
         return ExecuteCommand(command);
@@ -56,7 +74,10 @@ public class MySqlConnectionManager
         int affectedRows = command.ExecuteNonQuery();
         return affectedRows;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> AnalisisSonarEstablishment
     private IEnumerable<T> ExecuteCommand<T>(MySqlCommand command) where T : new()
     {
         using MySqlConnection connection = CreateConnection();
@@ -71,4 +92,8 @@ public class MySqlConnectionManager
         IEnumerable<T> results = DbMapper.MapDataTableToModelIterable<T>(dataTable);
         return results;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> AnalisisSonarEstablishment

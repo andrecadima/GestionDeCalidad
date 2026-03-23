@@ -24,6 +24,10 @@ namespace MicroServicioUser.App.Services
 
         public async Task<(bool ok, string? generatedUsername, string? generatedPassword, string? error)> RegisterUser(string firstName, string lastName, string email, string role, int createdBy)
         {
+<<<<<<< HEAD
+=======
+            var t = false;
+>>>>>>> AnalisisSonarEstablishment
             (bool ok, string ? generatedUsername, string ? generatedPassword, string ? error) =  await _registration.RegisterUser(firstName, lastName, email, role, createdBy);
             if (!ok)
                 return (false, null, null, error);
@@ -32,12 +36,16 @@ namespace MicroServicioUser.App.Services
             {
                 try
                 {
+<<<<<<< HEAD
                     await _emailService.SendNewUserCredentialsAsync(
                         email,
                         generatedUsername!,
                         firstName,
                         generatedPassword!
                     );
+=======
+                    await _emailService.SendNewUserCredentialsAsync(email, generatedUsername, firstName, generatedPassword);
+>>>>>>> AnalisisSonarEstablishment
                 }
                 catch (Exception ex)
                 {

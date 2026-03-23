@@ -56,4 +56,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+<<<<<<< HEAD
 app.Run();
+=======
+app.Run();
+
+#pragma warning disable S1118
+public partial class Program { }
+#pragma warning restore S1118
+>>>>>>> AnalisisSonarEstablishment

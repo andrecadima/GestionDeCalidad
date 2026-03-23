@@ -4,7 +4,11 @@ namespace MicroServicioUser.App.Services;
 
 public class LoginService
 {
+<<<<<<< HEAD
     private readonly ILogin _login;
+=======
+    private ILogin _login;
+>>>>>>> AnalisisSonarEstablishment
     public LoginService(ILogin login)
     {
         _login = login;

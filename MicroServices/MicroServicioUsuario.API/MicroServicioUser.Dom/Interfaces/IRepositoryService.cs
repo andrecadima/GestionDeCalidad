@@ -9,6 +9,10 @@ public interface IRepositoryService<TModel>
     public Task<Result<int>> Insert(TModel model);
     public Task<Result<int>> Update(TModel model);
     public Task<Result<int>> Delete(int id);
+<<<<<<< HEAD
     public Task<Result<TModel?>> GetById(int id);
+=======
+    public Task<Result<TModel>> GetById(int id);
+>>>>>>> AnalisisSonarEstablishment
     public Task<Result<IEnumerable<TModel>>> Search(string property);
 }
