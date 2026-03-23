@@ -1,0 +1,11 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Dto\LoginResponse.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Entities\User.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Interfaces\IAuthService.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Interfaces\IEmailService.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Interfaces\IJwtService.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Interfaces\ILogin.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Interfaces\IRegistration.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Interfaces\IRepository.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Interfaces\IRepositoryService.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Patterns\Result.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Dom\Rules\PasswordValidator.cs

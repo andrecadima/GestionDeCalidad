@@ -2,11 +2,6 @@
 using MicroServicioUser.Dom.Interfaces;
 using MicroServicioUser.Dom.Patterns;
 using MicroServicoUser.Inf;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MicroServicioUser.App.Services
 {
@@ -18,13 +13,14 @@ namespace MicroServicioUser.App.Services
         {
             this.userRepository = userRepository;
         }
+
         public async Task<Result<int>> Insert(User t)
         {
             t.CreatedDate = DateTime.Now;
             t.LastUpdate = DateTime.Now;
             t.Status = true;
             t.FirstLogin = 1;
-            
+
             return await userRepository.Insert(t);
         }
 
@@ -35,7 +31,7 @@ namespace MicroServicioUser.App.Services
             return await userRepository.Update(t);
         }
 
-        public async Task<Result<User>> GetById(int id)
+        public async Task<Result<User?>> GetById(int id)
         {
             return await userRepository.GetById(id);
         }
@@ -47,7 +43,7 @@ namespace MicroServicioUser.App.Services
 
         public async Task<Result<IEnumerable<User>>> GetAll()
         {
-            return  await userRepository.GetAll();
+            return await userRepository.GetAll();
         }
 
         public async Task<Result<IEnumerable<User>>> Search(string property)

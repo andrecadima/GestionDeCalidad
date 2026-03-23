@@ -1,0 +1,6 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.App\Services\EmailService.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.App\Services\IDbRepository.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.App\Services\JwtService.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.App\Services\LoginService.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.App\Services\RegistrationService.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.App\Services\UserService.cs

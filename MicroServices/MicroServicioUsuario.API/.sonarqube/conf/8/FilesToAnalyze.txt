@@ -1,0 +1,12 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\Controllers\UserController.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\Controllers\WeatherForecastController.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\Program.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\WeatherForecast.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\obj\Debug\net8.0\MicroServicioUsuario.API.GlobalUsings.g.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\obj\Debug\net8.0\MicroServicioUsuario.API.AssemblyInfo.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\obj\Debug\net8.0\MicroServicioUsuario.API.MvcApplicationPartsAssemblyInfo.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\appsettings.Development.json
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\appsettings.json
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\MicroServicioUsuario.http
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUsuario\Properties\launchSettings.json

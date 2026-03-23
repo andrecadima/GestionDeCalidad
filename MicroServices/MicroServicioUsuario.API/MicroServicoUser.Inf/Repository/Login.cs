@@ -20,7 +20,7 @@ public class Login : ILogin
         var user = userResult.Value;
 
         // 1) Verificar contraseña actual
-        if (!RegistrationHelpers.VerifyPassword(currentPassword, user.PasswordHash))
+        if (!RegistrationHelpers.VerifyPassword(currentPassword, user.PasswordHash!))
             return (false, "La contraseña actual no es correcta.");
 
         // 2) Reglas de complejidad
@@ -29,7 +29,7 @@ public class Login : ILogin
             return (false, pwCheck.error);
 
         // 3) Evitar misma contraseña
-        if (RegistrationHelpers.VerifyPassword(newPassword, user.PasswordHash))
+        if (RegistrationHelpers.VerifyPassword(newPassword, user.PasswordHash!))
             return (false, "La nueva contraseña debe ser diferente a la actual.");
 
         // 4) Persistir (NO tocar FirstLogin aquí)
@@ -54,10 +54,10 @@ public class Login : ILogin
         if (user.FirstLogin != 1)
             return (false, "Este usuario ya ha cambiado su contraseña inicial.");
 
-        if (!RegistrationHelpers.VerifyPassword(currentPassword, user.PasswordHash))
+        if (!RegistrationHelpers.VerifyPassword(currentPassword, user.PasswordHash!))
             return (false, "La contraseña actual no es correcta.");
 
-        if (RegistrationHelpers.VerifyPassword(newPassword, user.PasswordHash))
+        if (RegistrationHelpers.VerifyPassword(newPassword, user.PasswordHash!))
             return (false, "La nueva contraseña debe ser diferente a la actual.");
 
         user.PasswordHash = RegistrationHelpers.HashPassword(newPassword);
@@ -81,7 +81,7 @@ public class Login : ILogin
 
         var user = result.Value;
 
-        if (!RegistrationHelpers.VerifyPassword(plainPassword, user.PasswordHash))
+        if (!RegistrationHelpers.VerifyPassword(plainPassword, user.PasswordHash!))
             return (false, null, null, "Contraseña incorrecta.", false);
 
         // DB may store role as numeric code; convert it to application role name if necessary

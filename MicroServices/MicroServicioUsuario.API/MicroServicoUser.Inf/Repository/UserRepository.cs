@@ -10,15 +10,17 @@ namespace MicroServicoUser.Inf.Repository
     {
         public int Id { get; set; }
     }
+
     public class UserRepository : IRepository
     {
         private readonly MySqlConnectionManager _dbConnectionManager;
+
         public UserRepository(MySqlConnectionManager dbConnectionManager)
         {
             _dbConnectionManager = dbConnectionManager;
         }
 
-        public async Task<Result<IEnumerable<User>>> GetAll()
+        public Task<Result<IEnumerable<User>>> GetAll()
         {
             string query = @"
                 SELECT
@@ -26,7 +28,7 @@ namespace MicroServicoUser.Inf.Repository
                     username      AS Username,
                     password_hash AS PasswordHash,
                     first_name    AS FirstName,
-                    first_last_name     AS LastName,
+                    first_last_name AS LastName,
                     email         AS Email,
                     role          AS Role,
                     created_by    AS CreatedBy,
@@ -37,19 +39,22 @@ namespace MicroServicoUser.Inf.Repository
                 FROM user
                 WHERE status = TRUE
                 ORDER BY id DESC;";
+
             try
             {
-                
-                return Result<IEnumerable<User>>.Success(_dbConnectionManager.ExecuteQuery<User>(query));
+                return Task.FromResult(
+                    Result<IEnumerable<User>>.Success(_dbConnectionManager.ExecuteQuery<User>(query))
+                );
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return Result<IEnumerable<User>>.Failure(ex.Message);
+                return Task.FromResult(
+                    Result<IEnumerable<User>>.Failure(ex.Message)
+                );
             }
-            
         }
 
-        public async Task<Result<int>> Insert(User model)
+        public Task<Result<int>> Insert(User model)
         {
             string query = @"
                 INSERT INTO user
@@ -80,16 +85,22 @@ namespace MicroServicoUser.Inf.Repository
                     @Status,
                     @FirstLogin
                 );";
+
             try
             {
-                return Result<int>.Success(_dbConnectionManager.ExecuteParameterizedNonQuery(query, model));
+                return Task.FromResult(
+                    Result<int>.Success(_dbConnectionManager.ExecuteParameterizedNonQuery(query, model))
+                );
             }
             catch (Exception e)
             {
-                return Result<int>.Failure(e.Message);
+                return Task.FromResult(
+                    Result<int>.Failure(e.Message)
+                );
             }
         }
-        public async Task<Result<int>> Update(User model)
+
+        public Task<Result<int>> Update(User model)
         {
             string query = @"
                 UPDATE user
@@ -97,25 +108,29 @@ namespace MicroServicoUser.Inf.Repository
                     username      = @Username,
                     password_hash = @PasswordHash,
                     first_name    = @FirstName,
-                    first_last_name     = @LastName,
+                    first_last_name = @LastName,
                     email         = @Email,
-                    role         = @Role,
+                    role          = @Role,
                     created_by    = @CreatedBy,
-                    first_login    = @FirstLogin,
+                    first_login   = @FirstLogin,
                     last_update   = CURRENT_TIMESTAMP
                 WHERE id = @Id;";
+
             try
             {
-                return Result<int>.Success(_dbConnectionManager.ExecuteParameterizedNonQuery(query, model));
+                return Task.FromResult(
+                    Result<int>.Success(_dbConnectionManager.ExecuteParameterizedNonQuery(query, model))
+                );
             }
             catch (Exception e)
             {
-                return Result<int>.Failure(e.Message);
+                return Task.FromResult(
+                    Result<int>.Failure(e.Message)
+                );
             }
-            
         }
 
-        public async Task<Result<IEnumerable<User>>> Search(string property)
+        public Task<Result<IEnumerable<User>>> Search(string property)
         {
             var probe = new User
             {
@@ -130,17 +145,17 @@ namespace MicroServicoUser.Inf.Repository
 
             const string query = @"
                 SELECT
-                    id            ,
-                    username      ,
-                    password_hash ,
-                    first_name    ,
-                    first_last_name     ,
-                    email         ,
-                    role          ,
-                    created_by    ,
-                    created_date  ,
-                    last_update   ,
-                    status        ,
+                    id,
+                    username,
+                    password_hash,
+                    first_name,
+                    first_last_name,
+                    email,
+                    role,
+                    created_by,
+                    created_date,
+                    last_update,
+                    status,
                     first_login
                 FROM user
                 WHERE status = TRUE AND (
@@ -151,17 +166,22 @@ namespace MicroServicoUser.Inf.Repository
                     (@Role IS NOT NULL AND role LIKE CONCAT('%', @Role, '%'))
                 )
                 ORDER BY id DESC;";
+
             try
             {
-                return Result<IEnumerable<User>>.Success(_dbConnectionManager.ExecuteParameterizedQuery<User>(query, probe));
+                return Task.FromResult(
+                    Result<IEnumerable<User>>.Success(_dbConnectionManager.ExecuteParameterizedQuery<User>(query, probe))
+                );
             }
             catch (Exception e)
             {
-                return Result<IEnumerable<User>>.Failure(e.Message);
+                return Task.FromResult(
+                    Result<IEnumerable<User>>.Failure(e.Message)
+                );
             }
         }
 
-        public async Task<Result<User?>> GetById(int id)
+        public Task<Result<User?>> GetById(int id)
         {
             string query = @"
                 SELECT
@@ -169,7 +189,7 @@ namespace MicroServicoUser.Inf.Repository
                     username      AS Username,
                     password_hash AS PasswordHash,
                     first_name    AS FirstName,
-                    first_last_name     AS LastName,
+                    first_last_name AS LastName,
                     email         AS Email,
                     role          AS Role,
                     created_by    AS CreatedBy,
@@ -182,18 +202,24 @@ namespace MicroServicoUser.Inf.Repository
                 LIMIT 1;";
 
             var model = new User { Id = id };
+
             try
             {
-                var res = Result<User?>.Success(_dbConnectionManager.ExecuteParameterizedQuery<User>(query, model).FirstOrDefault());
-                return res;
+                var res = Result<User?>.Success(
+                    _dbConnectionManager.ExecuteParameterizedQuery<User>(query, model).FirstOrDefault()
+                );
+
+                return Task.FromResult(res);
             }
             catch (Exception e)
             {
-                return Result<User?>.Failure(e.Message);
+                return Task.FromResult(
+                    Result<User?>.Failure(e.Message)
+                );
             }
         }
 
-        public async Task<Result<User?>> GetByUsername(string username)
+        public Task<Result<User?>> GetByUsername(string username)
         {
             const string sql = @"
                 SELECT
@@ -201,7 +227,7 @@ namespace MicroServicoUser.Inf.Repository
                     username      AS Username,
                     password_hash AS PasswordHash,
                     first_name    AS FirstName,
-                    first_last_name     AS LastName,
+                    first_last_name AS LastName,
                     email         AS Email,
                     role          AS Role,
                     created_by    AS CreatedBy,
@@ -212,31 +238,46 @@ namespace MicroServicoUser.Inf.Repository
                 FROM user
                 WHERE username = @Username
                 LIMIT 1;";
+
             var probe = new User { Username = username };
+
             try
             {
-                return Result<User?>.Success(_dbConnectionManager.ExecuteParameterizedQuery<User>(sql, probe).FirstOrDefault());
-
+                return Task.FromResult(
+                    Result<User?>.Success(
+                        _dbConnectionManager.ExecuteParameterizedQuery<User>(sql, probe).FirstOrDefault()
+                    )
+                );
             }
             catch (Exception e)
             {
-                return Result<User?>.Failure(e.Message);
+                return Task.FromResult(
+                    Result<User?>.Failure(e.Message)
+                );
             }
         }
-        public async Task<Result<int>> Delete(int id)
+
+        public Task<Result<int>> Delete(int id)
         {
             string query = @"
                 UPDATE user
                 SET last_update = CURRENT_TIMESTAMP,
                     status = FALSE
                 WHERE id = @Id;";
+
             try
             {
-                return Result<int>.Success(_dbConnectionManager.ExecuteParameterizedNonQuery(query, new IdDto() { Id = id}));
+                return Task.FromResult(
+                    Result<int>.Success(
+                        _dbConnectionManager.ExecuteParameterizedNonQuery(query, new IdDto { Id = id })
+                    )
+                );
             }
             catch (Exception e)
             {
-                return Result<int>.Failure(e.Message);
+                return Task.FromResult(
+                    Result<int>.Failure(e.Message)
+                );
             }
         }
     }

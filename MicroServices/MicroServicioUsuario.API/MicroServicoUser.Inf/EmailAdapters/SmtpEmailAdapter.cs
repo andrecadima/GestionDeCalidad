@@ -45,7 +45,7 @@ public class SmtpEmailAdapter : IEmailService
             await smtpClient.SendMailAsync(message);
             return true;
         }
-        catch (Exception ex)
+        catch 
         {
             return false;
         }

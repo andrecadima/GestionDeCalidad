@@ -14,7 +14,8 @@ namespace MicroServicoUser.Inf.Persistence
 
         public MySqlConnectionDB(IConfiguration configuration)
         {
-            connectionString = configuration.GetConnectionString("MysqlUserServicioDB");
+            connectionString = configuration.GetConnectionString("MysqlUserServicioDB")
+                ?? throw new InvalidOperationException("Connection string 'MysqlUserServicioDB' no está configurada.");
         }
 
         public MySqlConnection GetConnection()

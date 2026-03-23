@@ -32,7 +32,12 @@ namespace MicroServicioUser.App.Services
             {
                 try
                 {
-                    await _emailService.SendNewUserCredentialsAsync(email, generatedUsername, firstName, generatedPassword);
+                    await _emailService.SendNewUserCredentialsAsync(
+                        email,
+                        generatedUsername!,
+                        firstName,
+                        generatedPassword!
+                    );
                 }
                 catch (Exception ex)
                 {

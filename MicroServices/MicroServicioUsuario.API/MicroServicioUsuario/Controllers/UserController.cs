@@ -16,25 +16,25 @@ namespace MicroServicioUsuario.API.Controllers
         [Required]
         public int ? Id { get; set; }
         [Required]
-        public string CurrentPassword { get; set;  }
+        public string ? CurrentPassword { get; set;  }
         [Required]
-        public string NewPassword{ get; set; }
+        public string ? NewPassword{ get; set; }
     }
     public class LoginDto{
         [Required]
-        public string Username { get; set; }
+        public string ? Username { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string ? Password { get; set; }
     }
     
     public class RegisterDto{
         [Required]
-        public string FirstName { get; set; }
+        public string ? FirstName { get; set; }
         [Required]
-        public string LastName { get; set; }
-        public string Email { get; set; }
+        public string ? LastName { get; set; }
+        public string ? Email { get; set; }
         [Required]
-        public string Role { get; set; }
+        public string ? Role { get; set; }
         [Required]
         public int? CreatedBy { get; set; }
     }
@@ -69,8 +69,11 @@ namespace MicroServicioUsuario.API.Controllers
             if (!cpDTO.Id.HasValue)
                 return BadRequest(new { Ok = false, Error = "Id is required." });
 
-            var res = await this.loginService.ChangePasswordFirstLogin(cpDTO.Id.Value, cpDTO.CurrentPassword,
-                cpDTO.NewPassword);
+            var res = await this.loginService.ChangePasswordFirstLogin(
+                cpDTO.Id.Value,
+                cpDTO.CurrentPassword!,
+                cpDTO.NewPassword!
+            );
 
             return Ok(new { Ok = res.ok, Error = res.error });
         }
@@ -78,16 +81,23 @@ namespace MicroServicioUsuario.API.Controllers
         [AllowAnonymous] // Allow anonymous access for login
         public async Task<ActionResult<bool>> Login([FromBody] LoginDto loginDTO)
         {
-            
-            var obj = await this.loginService.ValidateLogin(loginDTO.Username, loginDTO.Password);
-            if (obj.ok)
+
+            var obj = await this.loginService.ValidateLogin(loginDTO.Username!, loginDTO.Password!);
+
+            if (obj.ok && obj.role != null && obj.userId != null)
             {
-                var result = await jwtService.GenerateToken((int)obj.userId, obj.role);
-                return Ok( 
-                    new LoginResponse(){Error = "", Ok = true, Token = result.Value, TokenType = "Bearer"}
-                    );
+                var result = await jwtService.GenerateToken(obj.userId.Value, obj.role);
+
+                return Ok(new LoginResponse()
+                {
+                    Error = "",
+                    Ok = true,
+                    Token = result.Value,
+                    TokenType = "Bearer"
+                });
             }
-            return Ok(new LoginResponse(  ){ Error = obj.error, Ok = false });
+
+            return Ok(new LoginResponse() { Error = obj.error, Ok = false });
         }
         
         [HttpPost("register")]
@@ -99,10 +109,10 @@ namespace MicroServicioUsuario.API.Controllers
                 return BadRequest(new { Ok = false, Error = "CreatedBy is required." });
             }
             var obj = await this.registrationService.RegisterUser(
-                registerDto.FirstName,
-                registerDto.LastName,
-                registerDto.Email,
-                registerDto.Role,
+                registerDto.FirstName!,
+                registerDto.LastName!,
+                registerDto.Email!,
+                registerDto.Role!,
                 registerDto.CreatedBy.Value
             );
             return Ok(new { Ok = obj.ok, Error = obj.error });

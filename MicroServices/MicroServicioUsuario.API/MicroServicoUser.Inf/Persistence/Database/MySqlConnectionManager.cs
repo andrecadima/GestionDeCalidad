@@ -10,7 +10,8 @@ public class MySqlConnectionManager
 
     public MySqlConnectionManager(IConfiguration configuration)
     {
-        _connectionString = configuration.GetConnectionString("MysqlUserServicioDB");
+        _connectionString = configuration.GetConnectionString("MysqlUserServicioDB")
+            ?? throw new InvalidOperationException("Connection string 'MysqlUserServicioDB' no está configurada.");
     }
 
     private MySqlConnection CreateConnection() => new(_connectionString);

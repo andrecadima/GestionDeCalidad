@@ -3,7 +3,6 @@ using MicroServicioUser.App.Services;
 using MicroServicioUser.Dom.Interfaces;
 using MicroServicoUser.Inf.Persistence;
 using MicroServicoUser.Inf.Repository;
-using MicroServicioUser.App.Services;
 using MicroServicioUser.Dom.Entities;
 using MicroServicoUser.Inf.EmailAdapters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -37,11 +36,11 @@ var fromName = _configuration["Email:FromName"] ?? "Sistema de Pagos";
 var adapter = new SmtpEmailAdapter(
     new SmtpSettings
     {
-        Host = smtpHost,
+        Host = smtpHost!,
         Port = smtpPort,
-        User = smtpUser,
-        Password = smtpPass,
-        FromEmail = fromEmail,
+        User = smtpUser!,
+        Password = smtpPass!,
+        FromEmail = fromEmail!,
         FromName = fromName
     }
 );
@@ -65,7 +64,7 @@ builder.Services.AddSwaggerGen();
 
 // JWT Configuration
 var jwtSection = builder.Configuration.GetSection("Jwt");
-var keyBytes = Encoding.UTF8.GetBytes(jwtSection["Key"]);
+var keyBytes = Encoding.UTF8.GetBytes(jwtSection["Key"]!);
 
 builder.Services
     .AddAuthentication(options =>

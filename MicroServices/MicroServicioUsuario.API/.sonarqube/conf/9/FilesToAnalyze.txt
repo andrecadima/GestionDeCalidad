@@ -1,0 +1,30 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\App\JwtServiceBranchTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\App\JwtServiceExtraTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\App\JwtServiceTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\App\RegistrationServiceTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Controllers\UserControllerEdgeTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Controllers\UserControllerExtraTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Controllers\UserControllerLastTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Controllers\UserControllerTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Dom\PasswordValidatorExtraTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Dom\PasswordValidatorTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\AuthenticationRolesTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\DbMapperTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\DbParameterHelperExtraTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\DbParameterHelperTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\LoginExtraTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\LoginLastTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\LoginTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\MySqlConnectionTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\RegistrationExtraTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\RegistrationLastTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\RegistrationTests.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\Inf\UserRepositoryFailureTests.cs
+C:\Users\Andre\.nuget\packages\microsoft.net.test.sdk\18.3.0\build\net8.0\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\Andre\.nuget\packages\microsoft.testplatform.testhost\18.3.0\build\net8.0\x64\testhost.exe
+C:\Users\Andre\.nuget\packages\microsoft.testplatform.testhost\18.3.0\build\net8.0\x64\testhost.dll
+C:\Users\Andre\.nuget\packages\xunit.runner.visualstudio\3.1.5\build\net8.0\xunit.abstractions.dll
+C:\Users\Andre\.nuget\packages\xunit.runner.visualstudio\3.1.5\build\net8.0\xunit.runner.visualstudio.testadapter.dll
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\coverage.json
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\MicroServicioUser.Tests\TestResults\coverage\coverage.opencover.xml
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicioUser.Tests\TestResults\coverage\coverage.opencover.xml

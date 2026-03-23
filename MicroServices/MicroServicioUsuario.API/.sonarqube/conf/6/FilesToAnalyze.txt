@@ -1,0 +1,10 @@
+﻿D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\EmailAdapters\SmtpEmailAdapter.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\EmailAdapters\SmtpSettings.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\Persistence\Database\DbMapper.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\Persistence\Database\DbParameterHelper.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\Persistence\Database\MySqlConnectionManager.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\Persistence\MySqlConnectionDB.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\Repository\AuthenticationRoles.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\Repository\Login.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\Repository\Registration.cs
+D:\UCB\YA CASI SEMESTER\Gestion de Calidad -Course\GestionDeCalidad\MicroServices\MicroServicioUsuario.API\MicroServicoUser.Inf\Repository\UserRepository.cs
